@@ -1,0 +1,41 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+$fonte-titulo: 'Quicksand', sans-serif;
+$fonte-corpo: 'Roboto', sans-serif;
+
+
+$verde-base: #8cc643;
+$laranja-base: #d26200;
+$laranja-erro: #de4100;
+$verde-claro-fundo: #299025;
+$verde-escuro-fundo: #0d330a;
+$ciano-fundo: #3fa5a0;
+
+
+$largura-container: 960px;
+
+button{
+	@include appearance(none);
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	font-family: $fonte-titulo;
+}
+
+html{
+	font-size: 15px;
+	color: hsl(0,0%,20%);
+	line-height: 1.618;
+	font-family: $fonte-corpo;
+}

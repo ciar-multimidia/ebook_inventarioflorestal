@@ -1,0 +1,625 @@
+@import 'normalize';
+@import 'bourbon/bourbon';
+@import 'padroes';
+@import 'fontface';
+
+body{
+	min-height: 100vh;
+}
+
+#header{
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	padding: 3em 0;
+	background-image: url(../media/bg.jpeg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(center);
+	h1{
+		color: white;
+		margin: 0;
+		width: $largura-container;
+		text-align: center;
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	}
+	&.abertura{
+		padding: 0;
+		height: calc(100vh - 100px);
+		.logocurso{
+			display: block;
+			height: auto;
+			width: auto;
+			&.h{
+				width: 720px;
+			}
+
+			&.v{
+				width: 120px;
+				display: none;
+			}
+
+			@media screen and (max-width: 1200px) {
+				&.h{
+					width: 540px;
+				}
+			}
+
+			@media screen and (max-width: 700px) {
+				&.h{
+					width: 360px;
+				}
+			}
+
+			@media screen and (max-width: 450px) {
+				&.h{
+					display: none;
+				}
+
+				&.v{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+%texto-gradiente{
+	color: $verde-base;
+	@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
+		background: linear-gradient(135deg, $ciano-fundo 0%, $verde-base 70%, $verde-escuro-fundo 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+
+main{
+	padding: 6em 0 12em;
+	font-size: 15px;
+	article{
+		margin: 0 auto;
+		width: $largura-container;
+
+		p,blockquote,ol,ul,h2,h3,h4,h5,h6,table{
+			width: 60%;
+		}
+
+		a{
+			&, &:visited{
+				color: $laranja-base;
+			}
+		}
+
+		h2{
+			font-size: 2.5em;
+			line-height: 1.3;
+			margin-top: 1em;
+			margin-bottom: 0;
+			@extend %texto-gradiente;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+
+		table{
+			font-size: 0.9em;
+			&, *{
+				border-collapse: collapse;
+			}
+			th{
+				padding: 0 0 0.3em;
+				text-align: left;
+			}
+
+			thead{
+				border-bottom: 2px solid black;
+			}
+
+			tbody{
+				tr{
+					border-bottom: 1px solid grey;
+					th,td{
+						padding: 0.2em 0;
+					}
+				}
+			}
+		}
+
+		.pergunta{
+			padding-bottom: 4em;
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			margin-bottom: 1em;
+			&:last-child{
+				padding-bottom: 0;
+				border-bottom: 0px solid transparent;
+			}
+
+			&.sub{
+				margin-top: 2em;
+				padding-left: 2em;
+				padding-bottom: 2em;
+				border-bottom-style: dotted;
+				.alternativas{
+					margin-top: 2em;
+				}
+			}
+
+
+
+			h2{
+				width: auto;
+				margin: 0 0.5em 0em 0;
+				font-weight: bold;
+				float: left;
+				vertical-align: middle;
+				line-height: 1;
+			}
+
+			h3{
+				@extend %texto-gradiente;
+				width: auto;
+				margin: 0 0.5em 0em 0;
+				font-weight: bold;
+				float: left;
+				vertical-align: middle;
+				line-height: 1;
+				font-size: 1.5em;
+			}
+
+			.alternativas{
+				margin-top: 2em;
+				clear: both;
+				label{
+					padding: 0.4em 0 0.4em 2em;
+					width: 60%;
+					display: block;
+					margin-bottom: 0.6em;
+					background-color: transparentize($laranja-erro, 1);
+					@include transition(background-color 0.2s linear);
+					&:hover{
+						input:not([disabled]) + .custominput{
+							border-width: 2px;
+						}
+					}
+
+
+					input{
+						width: 0px;
+						height: 0px;
+						line-height: 0;
+						font-size: 0;
+						opacity: 0;
+						&:focus + .custominput{
+							border-width: 2px;
+						}
+						&:checked + .custominput{
+							border-width: 8px;
+						}
+						&:not([disabled]){
+							& + .custominput:hover{
+								border-width: 2px;
+								cursor: pointer;
+							}
+
+							& ~ .txt-alt:hover{
+								cursor: pointer;
+							}
+						}
+
+
+					}
+
+					.custominput{
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 0.5em;
+						width: 1.5em;
+						height: 1.5em;
+						border: 1px solid $verde-claro-fundo;
+						border-radius: 3px;
+					}
+
+					.txt-alt{
+						&:after{
+							content: '';
+							display: inline-block;
+							width: 1.5em;
+							height: 1.5em;
+							margin-left: 0.5em;
+							background-image: url(../media/errou.svg);
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-position: center;
+							vertical-align: middle;
+							@include transition(all 0.3s ease-out);
+							@include transition-property(transform, opacity);
+							opacity: 0;
+							@include transform(translateX(-10px));
+
+						}
+					}
+
+
+					&[data-correta]{
+						background-color: transparentize($verde-claro-fundo, 1);
+						.txt-alt{
+							&:after{
+								background-image: url(../media/acertou.svg);
+							}
+						}
+						&.revelada:not(.marcada){
+							.txt-alt{
+								&:after{
+									@include transition-delay(0.2s);
+								}
+							}
+						}
+					}
+
+					&.revelada{
+						.txt-alt{
+							&:after{
+								opacity: 1;
+								@include transform(translateX(0px));
+							}
+						}
+						
+					}
+
+					&.marcada{
+						background-color: transparentize($laranja-erro, 0.9);
+						&[data-correta]{
+							background-color: transparentize($verde-claro-fundo, 0.9);
+						}
+					}
+				}
+			}
+
+			ol.preposicoes{
+				width: $largura-container;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				margin-top: 2em;
+				clear: both;
+				li{
+					padding: 0.4em 0.4em 0.4em 2em;
+					width: 60%;
+					display: block;
+					margin: 0 0 1.4em;
+					@include display(flex);
+					@include justify-content(center);
+					@include align-items(center);
+					@include transition(background-color 0.2s linear);
+					background-color: transparent;
+					button{
+						text-transform: uppercase;
+						font-size: 1.2em;
+						width: 1.5em;
+						height: 1.5em;
+						border: 1px solid;
+						@include transition(all 0.2s linear);
+						@include transition-property(background-color, color);
+
+						&:not([disabled]):hover{
+							border-width: 2px;
+						}
+
+						&[disabled]{
+							cursor: auto;
+						}
+
+						&.bt-v{
+							border-top-left-radius: 3px;
+							border-bottom-left-radius: 3px;
+							color: $verde-claro-fundo;
+							border-color: $verde-claro-fundo;
+							background-color: transparentize($verde-claro-fundo, 1);
+						}
+
+						&.bt-f{
+							margin-left: 3px;
+							border-top-right-radius: 3px;
+							border-bottom-right-radius: 3px;
+							color: $laranja-erro;
+							border-color: $laranja-erro;
+							background-color: transparentize($laranja-erro, 1);
+						}
+					}
+					p{
+						margin: 0;
+						margin-left: 0.5em;
+						width: 100%;
+						&:after{
+							content: '';
+							display: inline-block;
+							width: 1.2em;
+							height: 1.2em;
+							margin-left: 0.3em;
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-position: center;
+							vertical-align: middle;
+							@include transition(all 0.3s ease-out);
+							@include transition-property(opacity);
+							opacity: 0;
+						}
+					}
+					&.respondida{
+						&[data-resposta='v']{
+							button.bt-v{
+								border-width: 2px;
+								color: white;
+								background-color: $verde-claro-fundo;
+							}
+						}
+						&[data-resposta='f']{
+							button.bt-f{
+								border-width: 2px;
+								color: white;
+								background-color: $laranja-erro;
+							}
+						}
+					}
+
+					&.acertou{
+						background-color: transparentize($verde-claro-fundo, 0.9);
+						p:after{
+							opacity: 1;
+							background-image: url(../media/acertou.svg);
+						}
+					}
+
+					&.errou{
+						background-color: transparentize($laranja-erro, 0.9);
+						p:after{
+							opacity: 1;
+							background-image: url(../media/errou.svg);
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+#proxeant{
+	margin: 4em auto 0;
+	padding-top: 2em;
+	width: $largura-container;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	@include display(flex);
+	@include justify-content(space-between);
+	@include align-items(center);
+	a{
+		@include display(flex);
+		@include align-items(center);
+		width: 25%;
+		color: $verde-base;
+		text-decoration: none;
+		font-family: $fonte-titulo;
+		font-size: 1.1em;
+		line-height: 1.3;
+		@include transition(color 0.1s linear);
+
+		span{
+			&:nth-child(2){
+				margin-left: 1em;
+			}
+		}
+		&[disabled]{
+			visibility: hidden;
+			pointer-events: none;
+		}
+		&:hover{
+			color: $laranja-base;
+		}
+		&:nth-child(2){
+			text-align: right;
+			@include justify-content(flex-end);
+			color: $ciano-fundo;
+			&:hover{
+				color: $laranja-base;
+			}
+
+			span{
+				&:nth-child(1){
+					margin-right: 1em;
+				}
+				&:nth-child(2){
+					margin-left: 0em;
+				}
+			}
+		}
+	}
+}
+
+
+#container-bt-sumario{
+	z-index: 2;
+	width: $largura-container;
+	position: fixed;
+	top: 0;	
+	left: calc(50% - #{$largura-container} / 2);
+	padding: 6px;
+	@include display(flex);
+	@include justify-content(flex-end);
+}
+
+#btsumario{
+	width: 50px;
+	height: 50px;
+	background: $verde-claro-fundo; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, $ciano-fundo 0%, $verde-base 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, $ciano-fundo 0%,$verde-base 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, $ciano-fundo 0%,$verde-base 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	position: relative;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+	@include transition(all 0.2s linear);
+	@include transition-property(box-shadow, opacity);
+
+	&.sumario-aberto{
+		pointer-events: none;
+		opacity: 0.1;
+	}
+
+	&:hover{
+		cursor: pointer;
+		box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+
+		&:before{
+			opacity: 1;
+		}
+	}
+
+	&:before, &:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	&:before{
+		background-color: $laranja-base;
+		z-index: 1;
+		opacity: 0;
+		@include transition(opacity 0.2s linear);
+	}
+	&:after{
+		background-image: url(../media/btsumario.svg);
+		background-size: cover;
+		z-index: 2;
+
+	}
+}
+
+@include keyframes(sumarioAparece){
+	0%{
+		@include transform(translateX(100%));
+
+	}
+
+	100%{
+		@include transform(translateX(0%));
+	}
+}
+
+#sumario{
+	font-size: 20px;
+	z-index: 4;
+	position: fixed;
+	// opacity: 0;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 400px;
+	background: rgba(255,255,255,0.95);
+	border-left: 1px solid rgba(0,0,0,0.2);
+	// background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255, 1) 100%); /* FF3.6-15 */
+	// background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+	// background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	@include transition(all 0.6s ease-in-out);
+	@include transition-property(opacity, transform);
+
+	&.dn{
+		display: none;
+	}
+
+	&.escondido{
+		@include transform(translateX(100%));
+	}
+
+	&.itens-aparece{
+		ol{
+			li{
+				@include transform(translateX(0px));
+				opacity: 1;
+			}
+		}
+	}
+	// @include animation(sumarioAparece 0.6s ease-out 0s 1 reverse backwards);
+
+	ol{
+		width: 100%;
+		max-height: 100%;
+		overflow: scroll;
+		padding: 2em 0;
+		margin: 0;
+		list-style: none;
+		li{
+			font-family: $fonte-titulo;
+			@include transform(translateX(50px));
+			opacity: 0;
+			@include transition(all 0.2s ease-out);
+			@include transition-property(opacity, transform);
+			a{
+				text-decoration: none;
+				padding: 0.8em 50px;
+				display: block;
+				line-height: 1.2;
+				@include transition(color 0.1s linear);
+				&:hover{
+					color: $laranja-base;
+				}
+			}
+
+			&.atual{
+				a{
+					position: relative;
+					pointer-events: none;
+					&, &:hover{
+						color: $verde-escuro-fundo;
+					}
+					&:before{
+						content: '';
+						position: absolute;
+						top: 0; left: 0;
+						height: 100%;
+						width: 4px;
+						background-color: $verde-escuro-fundo;
+					}
+				}
+			}
+			
+
+			@for $i from 1 through 9 {
+				&:nth-child(#{$i}) {
+					@include transition-delay( #{0.2 + 0.05 * ($i - 1) }s );
+					a{
+						$percentage: percentage( ( 1 / 8 ) * ( $i - 1 ) );
+						color: mix($verde-base, $ciano-fundo, $percentage);
+						&:hover{
+							color: $laranja-base;
+						}
+					}
+					&.atual{
+						a{
+							&, &:hover{
+								color: $verde-escuro-fundo;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#fecharSumario{	
+	position: absolute;
+	right: 0; top: 0;
+	width: 16px; height: 16px;
+	margin: 8px;
+	background-image: url(../media/btfechar.svg);
+	background-size: cover;
+}
