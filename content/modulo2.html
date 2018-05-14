@@ -18,45 +18,75 @@
 	<main>
 		<article>
 			
-			<h2>Apresentação</h2>
+<p>A volumetria representa a maneira de se calcular o volume de árvores na floresta, individualmente e em conjunto. O volume florestal é expresso em metros cúbicos e/ou em metros estéreos, e são nessas unidades de medida que ocorre a maioria das transações financeiras florestais.</p>
+<h2>Cubagem rigorosa</h2>
+<p>A cubagem rigorosa é a forma mais apropriada para quantificar o volume do fuste de uma árvore. Por esta técnica, secciona-se o fuste em várias partes menores, mensurando-as individualmente.</p>
+<p>Após calcular o volume dessas partes individualmente, somam-se estes volumes para obter o volume total do fuste. A maneira mais comum para realizar uma cubagem rigorosa é pelo uso da expressão matemática de Smalian, conhecida como método de Smalian (SOARES et al., 2006):</p>
 
-			<p>Este curso é voltado para a capacitação profissional em Inventário Florestal. São apresentados e discutidos conceitos importantes relacionados à prática de inventários florestais.</p>
-			<p>O curso é estruturado em módulos, organizados por temas: definições, mensuração amostragem e análise de dados de vegetação.</p>
-			
-			<h2>Objetivo</h2>
+<math><mi>V</mi><mo>=</mo><mfrac><mrow><msub><mrow><mi>A</mi><mi>S</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mrow><mi>A</mi><mi>S</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>*</mi><mi>L</mi></math>
+ 
+<p>AS<sub>1</sub> e AS<sub>2</sub> são as áreas seccionais obtidas nas extremidades de cada seção, em m², e L é o comprimento da seção. A área seccional (AS) é obtida pela expressão:</p>
 
-			<p>Assegurar aos profissionais maior confiança no planejamento, na execução e na análise de dados de Inventários Florestais realizados no Brasil, seja em florestas nativas ou plantadas.</p>
-			
-			<h2>Programa</h2>
-			<ol>
-			    <li>Definição de inventário florestal</li>
-				<li>Definição de floresta</li>
-				<li>Tipos de inventário florestal</li>
-				<li>Teoria de amostragem</li>
-				<li>Mensuração florestal</li>
-				<li>Processos de amostragem</li>
-				<li>Fitossociologia e Diversidade</li>
-			</ol>
+<math><mi>A</mi><mi>S</mi><mo>=</mo><mfrac><mrow><mi>π</mi><msup><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>4</mn></mrow></mfrac></math>
+ 
+<p>sendo <i>d</i> o diâmetro da seção.</p>
+<p>Normalmente, o comprimento da seção (L) fica entre 1 e 2 metros, mas pode-se usar valores proporcionais ao comprimento do fuste, como proposto por Hohenadl (SANQUETTA et al., 2014).</p>
 
-			<h2>O que é Inventário Florestal?</h2>
-			
-			<p>Há várias definições para inventário florestal, porém, sabe-se que todas se complementam e demonstram a coerência dos pesquisadores envolvidos com o tema.</p>
-			
-			<p>Os professores Sylvio Péllico-Netto e Doádi Brena (1997) definem o inventário florestal como a &ldquo;atividade que visa informar sobre os recursos florestais existentes em uma determinada área&rdquo;. Este é um conceito que parece amplo, entretanto, mostra que o levantamento das informações deve ser feito em uma área específica e não em uma área qualquer. Portanto, deve-se delimitar a floresta (população) a ser inventariada.</p>
-			
-			<p>O professor Waldenei Queiroz define o inventário florestal como o &ldquo;ramo da ciência florestal que visa avaliar as variáveis qualitativas e quantitativas da floresta e suas inter-relações, assim como dinâmicas de crescimento e sucessão florestal&rdquo;. Note que este conceito distingue informações que podem ser mensuradas na floresta, inclui as características ambientais (solo, clima, relevo...) e o tempo como componentes do inventário florestal.</p>
-			
-			<p>O professor Carlos Sanquetta complementa as definições anteriores considerando o uso da estatística: &ldquo;qualquer tipo de levantamento florestal, porém, a &ldquo;marca registrada&rdquo; de um IF é a sua representatividade amostral e sua validade estatística&rdquo;. Perceba que, neste caso, o inventário florestal pode ser qualquer levantamento florestal em qualquer espaço-tempo, desde que tenha representatividade amostral e validade estatística. Ou seja, as estimativas dos parâmetros populacionais devem ser válidas e precisas.</p>
-			
-			<p>As definições acima podem ser agrupadas e resumidas da seguinte forma: &ldquo;Levantamento quantitativo e qualitativo dos recursos florestais em um determinado espaço-tempo e estatisticamente representativo&rdquo; (VENTUROLI, 2015).</p>
-			
-			<p>A turma do <a href="https://www.google.com.br/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwicqLbv4obVAhWMl5AKHTrbCrEQFggoMAA&amp;url=http%3A%2F%2Fwww.ibge.gov.br%2F&amp;usg=AFQjCNGuNQz2gH-A3LkAod1HaFm3Qo6FTQ">Instituto Brasileiro de Geografia e Estatística</a> (IBGE), no Manual Técnico da Vegetação Brasileira (IBGE, 2012), é mais abrangente e engloba os conceitos supracitados: &ldquo;um inventário florestal trata da descrição quantitativa e qualitativa da floresta e, no caso específico de levantamentos contínuos, caracteriza a dinâmica de crescimento. Por sua vez, o inventário florestal contínuo é aquele que compreende todos os métodos nos quais a amostragem é realizada em ocasiões sucessivas, cujos objetivos, segundo a Organização das Nações Unidas para Agricultura e Alimentação (<em>Food and Agriculture Organization of the United Nations</em> - FAO), são os seguintes:</p>
+ <figure>
+<img src="media/m2/I.05.png" alt="">
+<figcaption></figcaption>
+</figure> 
 
-			<ul>
-			    <li>Estimar as características existentes da floresta na época do primeiro inventário;</li>
-    			<li>Fazer o mesmo na época do segundo inventário; e</li>
-    			<li>Estimar as mudanças ocorridas na floresta durante o período compreendido entre os dois inventários.</li>
-			</ul>
+
+<h2>Fator de forma (f)</h2>
+
+<p>O fator de forma é uma relação matemática entre o volume de um cilindro que apresenta diâmetro igual ao DAP da árvore objeto de mensuração (pode-se usar o diâmetro da base da árvore também) e o volume real da árvore, mensurado por cubagem rigorosa:</p>
+
+<math><mi>f</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi></mrow><mrow><mi>V</mi><mi>c</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>r</mi><mi>o</mi></mrow></mfrac></math>
+
+<p>Note que, para a estimativa do volume da floresta, deve-se usar um fator de forma médio (<math><mover accent="true"><mrow><mi>f</mi></mrow><mo>-</mo></mover></math>), obtido pela cubagem rigorosa de várias árvores (amostra representativa) em todas as classes de DAP da floresta. Dessa forma, o volume do fuste de uma árvore será obtido por:</p>
+
+
+<math><mi>V</mi><mo>=</mo><mfrac><mrow><mi>π</mi><msup><mrow><mi>D</mi><mi>A</mi><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>4</mn></mrow></mfrac><mi>H</mi><mover accent="true"><mrow><mi>f</mi></mrow><mo>-</mo></mover></math>
+ 
+<p>Neste caso, deve-se observar as unidades de medida e tanto o DAP quanto a altura (H) devem ser expressos em metros (m), pois o volume será expresso em metros cúbicos (m³).</p>
+<h2>Modelos volumétricos</h2>
+
+<p>Os modelos volumétricos servem para estimar o volume de árvores que não passaram pelo processo de cubagem rigorosa. O modelo mais utilizado em Inventários Florestais é o de Schumacher e Hall de 1933, conforme abaixo:</p>
+ 
+<p>O ajuste deste modelo deve ser feito também pelo Método dos Mínimos Quadrados. Porém, como a sua solução envolve a estimativa de três parâmetros, o uso de planilhas eletrônicas é recomendado e não será demonstrado nesta apostila. Uma lida no tutorial do <i>software</i> Excell®, da Microsoft, é suficiente para resolver este problema.</p>
+
+<p>O uso do modelo de Schumacher e Hall é feito linearizando-o pela aplicação de logaritmo neperiano (ln). De acordo com as propriedades logarítmicas, o modelo linearizado fica assim, devendo ser empregado da mesma maneira que os modelos hipsométricos:</p>
+
+<math><mi>L</mi><mi>n</mi><mi>V</mi><mo>=</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>+</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>1</mn></mrow></msub><mi>L</mi><mi>n</mi><mi> </mi><mi>D</mi><mi>A</mi><mi>P</mi><mo>+</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>2</mn></mrow></msub><mi>L</mi><mi>n</mi><mi>H</mi><mo>+</mo><mi>ε</mi></math>
+ 
+<h2>Volume de madeira empilhada</h2>
+
+<p>O cálculo do volume de madeira envolve o conhecimento de que o volume de uma pilha de madeira não corresponde ao volume do sólido geométrico formado pelo processo de empilhamento da madeira, i.é., as dimensões da pilha de madeira. Isso ocorre devido aos espaços vazios provocados pela forma das toras, que não permite o ajuste perfeito de umas sobre as outras.</p>
+
+<p>O volume total de uma pilha de madeira, considerando os espaços vazios, é denominado de volume estéreo (<i>st</i>) e, para saber sobre o volume real de madeira empilhada (<i>V</i>), deve-se desenvolver a seguinte expressão:</p>
+
+<math><mi>V</mi><mo>=</mo><mi>s</mi><mi>t</mi><mo>.</mo><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi></mrow></msub></math>
+ 
+<p>Para se calcular o fator de empilhamento (f<sub>e</sub>) deve-se proceder à derrubada e seccionamento de algumas árvores na floresta ou na unidade amostral, realizar a cubagem rigorosa desta(s) árvore(s), empilhá-la(s) e realizar a medição do sólido geométrico formado pela pilha de madeira. O volume do sólido geométrico é obtido mensurando-se as dimensões da pilha de madeira, conforme a seguinte expressão:</p>
+ 
+<math><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>v</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi> </mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi><mi> </mi><mfenced separators="|"><mrow><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced></mrow><mrow><mi>v</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi> </mi><mi>e</mi><mi>m</mi><mi>p</mi><mi>i</mi><mi>l</mi><mi>h</mi><mi>a</mi><mi>d</mi><mi>o</mi><mi> </mi><mfenced separators="|"><mrow><mi>s</mi><mi>t</mi></mrow></mfenced></mrow></mfrac></math>
+
+<h2>Espessura da casca</h2>
+<p>A espessura da casca pode ser mensurada de forma simples, devendo-se apenas conhecer a relação matemática entre esta e o diâmetro de uma árvore. O diâmetro sem casca é expresso pela seguinte relação matemática:</p>
+
+<math><msub><mrow><mi>d</mi></mrow><mrow><mi>s</mi><mo>/</mo><mi>c</mi></mrow></msub><mo>=</mo><msub><mrow><mi>d</mi></mrow><mrow><mi>c</mi><mo>/</mo><mi>c</mi></mrow></msub><mo>-</mo><mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mi>c</mi></mrow></msub></math>
+ 
+<p>Onde, d<sub>s/c</sub> é o diâmetro sem casca, d<sub>c/c</sub> é o diâmetro com casca e <i>E<sub>c</sub></i> refere-se à espessura da casca.</p>
+
+<p>A espessura da casca pode ser medida com instrumentos específicos ou com o auxílio de duas réguas graduadas em milímetros.</p>
+<p>Para a medição com as réguas, retire uma porção da casca da árvore e coloque duas réguas em forma de cruz, uma no sentido longitudinal ao fuste da árvore e a outra no sentido perpendicular à primeira. Faça a leitura da profundidade da casca com a régua perpendicular na altura em que esta estiver encostando a régua longitudinal, como mostra a Figura 4. Lembre-se de somar a parte inicial da régua, pois esta geralmente não se inicia em zero.</p>
+ 
+ <figure>
+<img src="media/m2/I.25.jpg" alt="">
+<figcaption>Figura 4. Procedimento para a medição da espessura da casca – Ec. Foto: Fábio Venturoli.</figcaption>
+</figure>
+
 
 		</article>
 
@@ -97,6 +127,8 @@
 	</nav>
 
 	<script src="../assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../assets/js/mathjax-config.js"></script>
+	<script src="../assets/js/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
 	<script src="../assets/js/app.js"></script>
 </body>
 </html>
