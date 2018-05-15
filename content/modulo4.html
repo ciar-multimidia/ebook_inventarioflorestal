@@ -32,132 +32,430 @@ Procedimentos:</p>
 		<li>Calcular os intervalos de confiança para a média e para o total.</li></ol>
 
 <p>Exemplo:</p>
-	Determinar o volume de madeira de uma floresta de eucalipto de 50 hectares sobre latossolo vermelho escuro (ambiente uniforme), com seis anos de idade.
-Após o mapeamento da área e a divisão das unidades amostrais, o próximo passo é realizar o Inventário Piloto.
-Neste caso, considerou-se um sorteio aleatório de 10 parcelas de 20m x 50m dentro de um universo amostral composto por 500 parcelas possíveis (50 hectares). O volume de madeira (m³) em cada parcela amostrada encontra-se na tabela abaixo.
+<p>Determinar o volume de madeira de uma floresta de Eucalipto de 50 hectares sobre latossolo vermelho escuro (ambiente uniforme), com seis anos de idade.</p>
+<p>Após o mapeamento da área e a divisão das unidades amostrais, o próximo passo é realizar o Inventário Piloto.</p>
+<p>Neste caso, considerou-se um sorteio aleatório de 10 parcelas de 20m x 50m dentro de um universo amostral composto por 500 parcelas possíveis (50 hectares). O volume de madeira (m³) em cada parcela amostrada encontra-se na tabela abaixo.</p>
 
 
-Volume de madeira (m³) de cada árvore cubada rigorosamente em cada uma das dez parcelas de 20m x 50m do Inventário Piloto
-	Volume (m³)
-Árvore	1	2	3	4	5	6	7	8	9	10
-1	1,01	0,57	1,24	0,71	1,37	0,65	0,59	0,32	0,73	0,62
-2	0,93	1,16	0,98	1,12	1,36	0,82	1,08	1,17	0,63	0,97
-3	1,00	1,27	1,39	1,27	0,87	0,66	0,66	1,07	0,70	1,17
-4	0,69	1,09	0,69	0,85	0,60	1,29	0,72	1,23	1,39	1,12
-5	0,61	0,97	1,12	0,79	0,75	0,56	0,58	1	1,24	1,17
-6	0,81	0,83	0,72	1,00	1,40	1,38	0,83	0,19	0,81	1,19
-7	1,30	0,62	0,88	1,40	0,87	1,39	0,95	0,37	1,06	1,35
-8	1,28	1,10	0,73	0,85	1,13	0,67	1,40	0,94	0,73	0,87
-9	1,02	1,15	1,19	1,37	1,39	0,89	1,32	0,59	0,92	1,26
-10	0,78	1,26	1,22	1,14	0,86	1,04	0,96	0,64	1,09	1,31
-11	0,61	1,36	1,10	0,65	1,41	1,26	0,69	0,2	0,86	1,01
-12	0,66	0,61	0,92	0,62	0,92	1,11	0,84		0,84	0,96
-13	1,25	0,80	1,05	0,91	0,94	0,58	1,32		0,87	0,87
-14	1,36		1,08	0,69	1,09	1,03	0,82		1,05	0,82
-15	1,36		1,19	1,41	1,08		0,64			0,63
-16	0,72		0,64	0,92	1,07		1,01			
-Total	15,39	12,79	16,14	15,7	17,11	13,33	14,41	7,72	12,92	15,32
+<table>
+  <tr>
+    <th colspan="11">Volume de madeira (m³) de cada árvore cubada rigorosamente em cada uma das dez parcelas de 20m x 50m do Inventário Piloto</th>
+  </tr>
+  <tr>
+    <td colspan="11">Volume (m³)</td>
+  </tr>
+  <tr>
+    <td>Árvore</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1,01</td>
+    <td>0,57</td>
+    <td>1,24</td>
+    <td>0,71</td>
+    <td>1,37</td>
+    <td>0,65</td>
+    <td>0,59</td>
+    <td>0,32</td>
+    <td>0,73</td>
+    <td>0,62</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>0,93</td>
+    <td>1,16</td>
+    <td>0,98</td>
+    <td>1,12</td>
+    <td>1,36</td>
+    <td>0,82</td>
+    <td>1,08</td>
+    <td>1,17</td>
+    <td>0,63</td>
+    <td>0,97</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>1,00</td>
+    <td>1,27</td>
+    <td>1,39</td>
+    <td>1,27</td>
+    <td>0,87</td>
+    <td>0,66</td>
+    <td>0,66</td>
+    <td>1,07</td>
+    <td>0,70</td>
+    <td>1,17</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0,69</td>
+    <td>1,09</td>
+    <td>0,69</td>
+    <td>0,85</td>
+    <td>0,60</td>
+    <td>1,29</td>
+    <td>0,72</td>
+    <td>1,23</td>
+    <td>1,39</td>
+    <td>1,12</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>0,61</td>
+    <td>0,97</td>
+    <td>1,12</td>
+    <td>0,79</td>
+    <td>0,75</td>
+    <td>0,56</td>
+    <td>0,58</td>
+    <td>1</td>
+    <td>1,24</td>
+    <td>1,17</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>0,81</td>
+    <td>0,83</td>
+    <td>0,72</td>
+    <td>1,00</td>
+    <td>1,40</td>
+    <td>1,38</td>
+    <td>0,83</td>
+    <td>0,19</td>
+    <td>0,81</td>
+    <td>1,19</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>1,30</td>
+    <td>0,62</td>
+    <td>0,88</td>
+    <td>1,40</td>
+    <td>0,87</td>
+    <td>1,39</td>
+    <td>0,95</td>
+    <td>0,37</td>
+    <td>1,06</td>
+    <td>1,35</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>1,28</td>
+    <td>1,10</td>
+    <td>0,73</td>
+    <td>0,85</td>
+    <td>1,13</td>
+    <td>0,67</td>
+    <td>1,40</td>
+    <td>0,94</td>
+    <td>0,73</td>
+    <td>0,87</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>1,02</td>
+    <td>1,15</td>
+    <td>1,19</td>
+    <td>1,37</td>
+    <td>1,39</td>
+    <td>0,89</td>
+    <td>1,32</td>
+    <td>0,59</td>
+    <td>0,92</td>
+    <td>1,26</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>0,78</td>
+    <td>1,26</td>
+    <td>1,22</td>
+    <td>1,14</td>
+    <td>0,86</td>
+    <td>1,04</td>
+    <td>0,96</td>
+    <td>0,64</td>
+    <td>1,09</td>
+    <td>1,31</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>0,61</td>
+    <td>1,36</td>
+    <td>1,10</td>
+    <td>0,65</td>
+    <td>1,41</td>
+    <td>1,26</td>
+    <td>0,69</td>
+    <td>0,2</td>
+    <td>0,86</td>
+    <td>1,01</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>0,66</td>
+    <td>0,61</td>
+    <td>0,92</td>
+    <td>0,62</td>
+    <td>0,92</td>
+    <td>1,11</td>
+    <td>0,84</td>
+    <td></td>
+    <td>0,84</td>
+    <td>0,96</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>1,25</td>
+    <td>0,80</td>
+    <td>1,05</td>
+    <td>0,91</td>
+    <td>0,94</td>
+    <td>0,58</td>
+    <td>1,32</td>
+    <td></td>
+    <td>0,87</td>
+    <td>0,87</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>1,36</td>
+    <td></td>
+    <td>1,08</td>
+    <td>0,69</td>
+    <td>1,09</td>
+    <td>1,03</td>
+    <td>0,82</td>
+    <td></td>
+    <td>1,05</td>
+    <td>0,82</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>1,36</td>
+    <td></td>
+    <td>1,19</td>
+    <td>1,41</td>
+    <td>1,08</td>
+    <td></td>
+    <td>0,64</td>
+    <td></td>
+    <td></td>
+    <td>0,63</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>0,72</td>
+    <td></td>
+    <td>0,64</td>
+    <td>0,92</td>
+    <td>1,07</td>
+    <td></td>
+    <td>1,01</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td></td>
+    <td>12,7</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>13,3</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>15,39</td>
+    <td>9</td>
+    <td>16,14</td>
+    <td>15,7</td>
+    <td>17,11</td>
+    <td>3</td>
+    <td>14,41</td>
+    <td>7,72</td>
+    <td>12,92</td>
+    <td>15,32</td>
+  </tr>
+</table>
 
-A próxima etapa é estimar os parâmetros da população que permitem checar a representatividade amostral.
-Média
+<p>A próxima etapa é estimar os parâmetros da população que permitem checar a representatividade amostral.</p>
+<h3>Média</h3>
+
+<math><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>=</mo><mfrac><mrow><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><mrow><msub><mrow><mi>X</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></mrow></mrow><mrow><mi>n</mi></mrow></mfrac><mo>=</mo><mi> </mi><mfrac><mrow><mo>(</mo><mn>15,39</mn><mo>+</mo><mn>12,79</mn><mo>+</mo><mo>…</mo><mo>+</mo><mn>15,32</mn><mo>)</mo></mrow><mrow><mn>10</mn></mrow></mfrac><mo>=</mo><mn>14,08</mn><mi>m</mi><mo>³</mo></math> 
+
+<h3>Variância</h3>
+
+<math><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup><mo>=</mo><mfrac><mrow><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><mrow><msup><mrow><mfenced separators="|"><mrow><msub><mrow><mi>X</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mrow><mfenced separators="|"><mrow><mn>15,39</mn><mo>-</mo><mn>14,08</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mfenced separators="|"><mrow><mn>12,79</mn><mo>-</mo><mn>14,08</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mo>…</mo><mo>+</mo><msup><mrow><mfenced separators="|"><mrow><mn>15,32</mn><mo>-</mo><mn>14,08</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>9</mn></mrow></mfrac><mo>=</mo><mo>(</mo><mn>7,0481</mn><mi>m</mi><mo>³</mo><mo>)</mo><mo>²</mo></math>
+
+
+<h3>A representatividade amostral é calculada da seguinte forma:</h3>
+
+<math><mi>n</mi><mo>=</mo><mfrac><mrow><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mi> </mi><mfrac><mrow><msup><mrow><mn>2,262</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo><mn>7,0481</mn></mrow><mrow><msup><mrow><mn>1,408</mn></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mn>18,19</mn><mi> </mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>s</mi></math>
  
+<p>O valor tabelado de <i>t-Student</i> com 9 graus de liberdade (10<sup>-1</sup>) e 95% de probabilidade (1-95) é:</p>
 
-Variância
+
+<p><math><msub><mrow><mi>t</mi></mrow><mrow><mo>(</mo><mn>9</mn><mo>;</mo><mn>0,05</mn><mo>)</mo></mrow></msub><mo>=</mo><mn>2,262</mn></math>  – ver Anexo A.</p>
+
+<p>O limite de erro admitido para esta amostragem foi de 10% da média:</p>
+
+<math><mi>E</mi><mo>=</mo><mn>0,1</mn><mo>×</mo><mn>14,08</mn><mo>=</mo><mn>1,408</mn><mi>m</mi><mo>³</mo></math>
  
+<p>Neste caso, verificou-se que a amostragem não foi suficiente para representar significativamente a população, pois, com esta variância nos volumes das parcelas seriam necessárias pelo menos 18 parcelas para conseguir a representatividade estatística da população.</p>
+<p>O passo seguinte é ajustar a intensidade amostral até atingir um valor de n constante. Isso é feito calculando-se sucessivos valores de <i>n</i>.</p>
+<p>Primeiramente, calcula-se um n considerando uma amostragem de 18 parcelas onde foram obtidas a mesma média e variância das 10 parcelas já amostradas (suposição). Note que agora o valor de t será ajustado para o valor que represente 17 graus de liberdade [ ], com os mesmos 95% de confiabilidade, da seguinte forma:</p>
 
-A representatividade amostral é calculada da seguinte forma:
+<math><mi>n</mi><mo>=</mo><mfrac><mrow><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mi> </mi><mfrac><mrow><msup><mrow><mn>2,11</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo><mn>7,0481</mn></mrow><mrow><msup><mrow><mn>1,408</mn></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mn>15,8</mn><mi> </mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>s</mi></math>
  
-O valor tabelado de t-Student com 9 graus de liberdade (10-1) e 95% de probabilidade (1-95) é:
-  – ver Anexo A.
-O limite de erro admitido para esta amostragem foi de 10% da média:
+<p>O número 15 ainda não é suficiente para ser considerado representativo da população, pois não está próximo de 18, o valor anterior. Dessa forma, repete-se o cálculo de n considerando 14 graus de liberdade e 95% de confiança [t<sub>(14;0,05)</sub>=2,145]:</p>
+
+<math><mi>n</mi><mo>=</mo><mfrac><mrow><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mi> </mi><mfrac><mrow><msup><mrow><mn>2,145</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo><mn>7,0481</mn></mrow><mrow><msup><mrow><mn>1,408</mn></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mn>16,3</mn><mi> </mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>s</mi></math>
  
-	Neste caso, verificou-se que a amostragem não foi suficiente para representar significativamente a população, pois, com esta variância nos volumes das parcelas seriam necessárias pelo menos 18 parcelas para conseguir a representatividade estatística da população.
-	O passo seguinte é ajustar a intensidade amostral até atingir um valor de n constante. Isso é feito calculando-se sucessivos valores de n.
-Primeiramente, calcula-se um n considerando uma amostragem de 18 parcelas onde foram obtidas a mesma média e variância das 10 parcelas já amostradas (suposição). Note que agora o valor de t será ajustado para o valor que represente 17 graus de liberdade [ ], com os mesmos 95% de confiabilidade, da seguinte forma:
+<p>Note que desta vez a intensidade amostral foi praticamente a mesma que a anterior, ou seja, 16 parcelas. O procedimento agora é voltar ao campo e medir mais seis parcelas, pois 10 já foram medidas no inventário piloto. Isto feito, pode-se dar sequência às estimativas dos parâmetros populacionais.</p>
+<p>Como exercício, lista-se mais seis valores de volume total (m³) para as parcelas complementares do inventário florestal, considerando-o como o inventário definitivo:</p>
+
+<table>
+  <tr>
+    <th>Parcelas</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+  </tr>
+  <tr>
+    <td>Volume total (m³)</td>
+    <td>14,3</td>
+    <td>13,2</td>
+    <td>12,6</td>
+    <td>10,01</td>
+    <td>13,4</td>
+    <td>11,05</td>
+  </tr>
+</table>
+
+<p>Segue o inventário florestal:</p>
+<p>Calcula-se uma nova média e variância amostral e as demais estimativas dos parâmetros populacionais.</p>
+<h3>Média</h3>
+
+<math><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>=</mo><mfrac><mrow><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><mrow><msub><mrow><mi>X</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></mrow></mrow><mrow><mi>n</mi></mrow></mfrac><mo>=</mo><mi> </mi><mfrac><mrow><mo>(</mo><mn>15,39</mn><mo>+</mo><mn>12,79</mn><mo>+</mo><mo>…</mo><mo>+</mo><mn>11,05</mn><mo>)</mo></mrow><mrow><mn>16</mn></mrow></mfrac><mo>=</mo><mn>13,46</mn><mi>m</mi><mo>³</mo></math>
  
-	O número 15 ainda não é suficiente para ser considerado representativo da população, pois não está próximo de 18, o valor anterior. Dessa forma, repete-se o cálculo de n considerando 14 graus de liberdade e 95% de confiança [ :
+<h3>Variância</h3>
+
+<math><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup><mo>=</mo><mfrac><mrow><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><mrow><msup><mrow><mfenced separators="|"><mrow><msub><mrow><mi>X</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mrow><mfenced separators="|"><mrow><mn>15,39</mn><mo>-</mo><mn>13,46</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mo>…</mo></mrow><mrow><mn>15</mn></mrow></mfrac><mo>=</mo><mo>(</mo><mn>5,7694</mn><mi>m</mi><mo>³</mo><mo>)</mo><mo>²</mo></math>
  
-	Note que desta vez a intensidade amostral foi praticamente a mesma que a anterior, ou seja, 16 parcelas. O procedimento agora é voltar ao campo e medir mais seis parcelas, pois 10 já foram medidas no inventário piloto. Isto feito, pode-se dar sequência às estimativas dos parâmetros populacionais.
-Como exercício, lista-se mais seis valores de volume total (m³) para as parcelas complementares do inventário florestal, considerando-o como o inventário definitivo:
+<h3>Erro padrão</h3>
 
-Parcelas	11	12	13	14	15	16
-Volume total (m³)	14,3	13,2	12,6	10,01	13,4	11,05
+<p> <math><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mo>=</mo><msqrt><mfrac><mrow><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><mi>n</mi></mrow></mfrac></msqrt><mo>=</mo><msqrt><mfrac><mrow><mn>5,7694</mn></mrow><mrow><mn>16</mn></mrow></mfrac></msqrt><mo>=</mo><mn>0,6005</mn><mi>m</mi><mo>³</mo></math> ou <math><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mfenced separators="|"><mrow><mi>%</mi></mrow></mfenced><mo>=</mo><mi> </mi><mfrac><mrow><mn>0,6005</mn></mrow><mrow><mn>13,46</mn></mrow></mfrac><mi>*</mi><mn>100</mn><mo>=</mo><mn>4,46</mn><mi>%</mi></math> </p> 
 
-Segue o inventário florestal:
-Calcula-se uma nova média e variância amostral e as demais estimativas dos parâmetros populacionais.
-Média
+
+<h3>Erro de amostragem - <math><msub><mrow><mi>t</mi></mrow><mrow><mo>(</mo><mn>15</mn><mo>;</mo><mn>0,05</mn><mo>)</mo></mrow></msub><mo>=</mo><mn>2,131</mn></math> </h3>
+
+<p><math><mi>E</mi><mi>r</mi><mi>r</mi><msub><mrow><mi>o</mi></mrow><mrow><mi>a</mi><mi>b</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>t</mi><mi>o</mi></mrow></msub><mo>:</mo><msub><mrow><mi>E</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>=</mo><mo>±</mo><mi>t</mi><mo>.</mo><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mo>=</mo><mn>2,131</mn><mo>×</mo><mn>0,6005</mn><mo>=</mo><mn>1,27</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></math></p>
+
+<p><math><mi>E</mi><mi>r</mi><mi>r</mi><msub><mrow><mi>o</mi></mrow><mrow><mi>r</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>v</mi><mi>o</mi></mrow></msub><mo>:</mo><msub><mrow><mi>E</mi></mrow><mrow><mi>r</mi></mrow></msub><mo>=</mo><mo>±</mo><mfrac><mrow><mi>t</mi><mo>.</mo><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></mfrac><mo>×</mo><mn>100</mn><mo>=</mo><mfrac><mrow><mn>2,131</mn><mi>x</mi><mn>0,6005</mn></mrow><mrow><mn>13,46</mn></mrow></mfrac><mo>×</mo><mn>100</mn><mo>=</mo><mn>9,50</mn><mi>%</mi></math></p>
+
+
+<h3>Intervalo de confiança para a média</h3>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>-</mo><mi>t</mi><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>-</mo></mover><mo>≤</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>+</mo><mi>t</mi><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow></mfenced><mo>=</mo><mi>P</mi></math></p>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mn>13,46</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>±</mo><mn>1,27</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced><mo>=</mo><mn>95</mn><mi>%</mi></math></p>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mn>12,19</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>-</mo></mover><mo>≤</mo><mn>14,73</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced><mo>=</mo><mn>95</mn><mi>%</mi></math></p>
+
+
+
+<h3>Total da população</h3>
+
+<math><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>=</mo><mn>500</mn><mi> </mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">s</mi><mo>×</mo><mn>13,46</mn><mi>m</mi><mo>³</mo><mo>.</mo><msup><mrow><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mn>6.730</mn><mi>m</mi><mo>³</mo></math>
  
-Variância
+<h3>Estimativa do total por hectare</h3>
+
+<math><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>=</mo><mfrac><mrow><mn>6,730</mn><mi>m</mi><mo>³</mo></mrow><mrow><mn>50</mn><mi>h</mi><mi>a</mi></mrow></mfrac><mo>=</mo><mn>1346</mn><mi>m</mi><mo>³</mo><mo>.</mo><msup><mrow><mi>h</mi><mi>a</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></math>
  
-Erro padrão
-  ou   
-Erro de amostragem -  
+<h3>Intervalo de confiança para o total da população</h3>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>-</mo><mi>N</mi><mi>t</mi><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mo>≤</mo><mi>X</mi><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>+</mo><mi>N</mi><mi>t</mi><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow></mfenced><mo>=</mo><mi>P</mi></math></p>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mn>6.730</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>-</mo><mn>500</mn><mi> </mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>s</mi><mo>×</mo><mn>1,27</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>.</mo><msup><mrow><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>≤</mo><mi>X</mi><mo>≤</mo><mn>6.730</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>+</mo><mn>500</mn><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>s</mi><mo>×</mo><mn>1,27</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>.</mo><msup><mrow><mi>p</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>e</mi><mi>l</mi><mi>a</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfenced><mo>=</mo><mn>95</mn><mi>%</mi></math></p>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mn>6.730</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>±</mo><mn>635</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced><mo>=</mo><mn>95</mn><mi>%</mi></math></p>
+
+<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mn>6.095</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>≤</mo><mi>X</mi><mo>≤</mo><mn>7.365</mn><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced><mo>=</mo><mn>95</mn><mi>%</mi></math></p>
 
 
 
+<p>A floresta estudada possui entre 6.095m³ e 7.365m³ de madeira, com 95% de confiança. Ou seja, se forem feitas 100 amostragens com 16 parcelas nesta população, 95% dessas amostragens vão apresentar um volume florestal dentro do intervalo de confiança estimado.</p>
+<p>Considerando que a floresta tem seis anos de idade, uma estimativa média de produção por ano é obtida dividindo-se os totais por hectare pela idade. Com isso, estima-se, com 95% de confiança, que a floresta cresceu em média entre 20,31m³.ha<sup>-1</sup>.ano<sup>-1</sup> e 24,55m³.ha<sup>-1</sup>.ano<sup>-1</sup>.</p>
+
+<h2>Parcelas de área variável: o método de Prodan </h2>
+
+<p>Este método é conhecido como o método das seis árvores e foi apresentado por Prodan em 1968, em Freiburg, na Alemanha (PÉLLICO NETO; BRENA, 1997).</p>
+<p>Consiste em alocar pontos amostrais na floresta segundo um delineamento amostral qualquer, o aleatório, por exemplo.</p>
+<p>Em cada ponto amostral medem-se as seis (6) árvores mais próximas (sorteia-se os pontos na floresta), considerando o limite de inclusão na amostragem (DAP > 5cm, por exemplo), e assume-se que essas árvores encontram-se em uma parcela circular cujo raio R é dado pela distância ponto-árvore entre a última árvore (sexta árvore) e o ponto, conforme apresentado na Figura 5.</p>
+
+ <figure>
+<img src="media/m3/01.png" alt="">
+<figcaption>Figura 5. Configuração de uma unidade amostral de área variável onde o raio circular é determinado pela distância entre o centro da unidade amostral (ponto) e a sexta árvore mais próxima.</figcaption>
+</figure>
 
 
-Intervalo de confiança para a média
 
+<p>O raio da parcela de área variável R é calculado pela distância do ponto central à sexta árvore (R6) adicionado da metade o diâmetro desta sexta árvore:</p>
 
-
-Total da população
+<math><mi>R</mi><mo>=</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>6</mn></mrow></msub><mo>+</mo><mfrac><mrow><msub><mrow><mi>d</mi></mrow><mrow><mn>6</mn></mrow></msub></mrow><mrow><mn>2</mn></mrow></mfrac></math>
  
-Estimativa do total por hectare
+<h2>Estimativa do número de árvores por hectare </h2>
+
+<p>A estimativa do número de árvores por hectare é feita relacionando-se a área em que se encontram as árvores amostras (seis árvores) com o número de árvores em cada ponto (seis árvores). Como em todos os pontos são medidas exatamente seis árvores, varia-se somente a área das parcelas, ou seja, a distância da sexta árvore ao ponto. Daí vem o nome: parcela de área variável.</p>
+
+<p>Considerando que apenas metade da sexta árvore está dentro da parcela, pois é a distância entre o ponto central P e o centro da sexta árvore que determinam o raio da parcela R, cada parcela possuirá 5,5 árvores e não seis. Desta forma, a estimativa do número de árvores por hectare (N) se dá pela relação abaixo:</p>
+
+<math><mi>N</mi><mo>=</mo><mfenced separators="|"><mrow><mn>5,5</mn></mrow></mfenced><mo>.</mo><mfrac><mrow><mn>10.000</mn></mrow><mrow><mi>π</mi><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>55.000</mn></mrow><mrow><mi>π</mi><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac></math>
+
+<p>Onde πR<sup>2</sup> é a área da unidade amostral.</p>
+
+<h2>Estimativa da área basal por hectare</h2>
+
+<math><mi>G</mi><mo>=</mo><mfrac><mrow><mo>[</mo><msubsup><mrow><mi>d</mi></mrow><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msubsup><mo>+</mo><msubsup><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow><mrow><mn>2</mn></mrow></msubsup><mo>+</mo><msubsup><mrow><mi>d</mi></mrow><mrow><mn>3</mn></mrow><mrow><mn>2</mn></mrow></msubsup><mo>+</mo><msubsup><mrow><mi>d</mi></mrow><mrow><mn>4</mn></mrow><mrow><mn>2</mn></mrow></msubsup><mo>+</mo><msubsup><mrow><mi>d</mi></mrow><mrow><mn>5</mn></mrow><mrow><mn>2</mn></mrow></msubsup><mo>+</mo><msup><mrow><mfenced separators="|"><mrow><mfrac><mrow><msub><mrow><mi>d</mi></mrow><mrow><mn>6</mn></mrow></msub></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mo>]</mo></mrow><mrow><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mi mathvariant="normal">*</mi><mn>2500</mn></math>
  
-Intervalo de confiança para o total da população
+<h2>Estimativa do volume por hectare </h2>
+
+<p>A estimativa do volume por hectare, a partir da volumetria de cada uma das seis árvores amostradas é dada por:</p> 
 
 
+<math><mi>V</mi><mo>=</mo><mi> </mi><mfrac><mrow><msub><mrow><mo>(</mo><mi>V</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mrow><mi>V</mi></mrow><mrow><mn>2</mn></mrow></msub><mo>+</mo><msub><mrow><mi>V</mi></mrow><mrow><mn>3</mn></mrow></msub><mo>+</mo><msub><mrow><mi>V</mi></mrow><mrow><mn>4</mn></mrow></msub><mo>+</mo><msub><mrow><mi>V</mi></mrow><mrow><mn>5</mn></mrow></msub><mo>+</mo><mfrac><mrow><msub><mrow><mi>V</mi></mrow><mrow><mn>6</mn></mrow></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi> </mi><mo>)</mo></mrow><mrow><mi>π</mi><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mi>*</mi><mn>10.000</mn></math>
 
-
-
-A floresta estudada possui entre 6.095m³ e 7.365m³ de madeira, com 95% de confiança. Ou seja, se forem feitas 100 amostragens com 16 parcelas nesta população, 95% dessas amostragens vão apresentar um volume florestal dentro do intervalo de confiança estimado.
-Considerando que a floresta tem seis anos de idade, uma estimativa média de produção por ano é obtida dividindo-se os totais por hectare pela idade. Com isso, estima-se, com 95% de confiança, que a floresta cresceu em média entre 20,31m³.ha-1.ano-1 e 24,55m³.ha-1.ano-1.
-4.2 Parcelas de área variável: o método de Prodan 
-Este método é conhecido como o método das seis árvores e foi apresentado por Prodan em 1968, em Freiburg, na Alemanha (PÉLLICO NETO; BRENA, 1997).
-Consiste em alocar pontos amostrais na floresta segundo um delineamento amostral qualquer, o aleatório, por exemplo.
-Em cada ponto amostral medem-se as seis (6) árvores mais próximas (sorteia-se os pontos na floresta), considerando o limite de inclusão na amostragem (DAP > 5cm, por exemplo), e assume-se que essas árvores encontram-se em uma parcela circular cujo raio R é dado pela distância ponto-árvore entre a última árvore (sexta árvore) e o ponto, conforme apresentado na Figura 5.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Figura 5. Configuração de uma unidade amostral de área variável onde o raio circular é determinado pela distância entre o centro da unidade amostral (ponto) e a sexta árvore mais próxima.
-
-O raio da parcela de área variável R é calculado pela distância do ponto central à sexta árvore (R6) adicionado da metade o diâmetro desta sexta árvore:
- 
-Estimativa do número de árvores por hectare 
-	A estimativa do número de árvores por hectare é feita relacionando-se a área em que se encontram as árvores amostras (seis árvores) com o número de árvores em cada ponto (seis árvores). Como em todos os pontos são medidas exatamente seis árvores, varia-se somente a área das parcelas, ou seja, a distância da sexta árvore ao ponto. Daí vem o nome: parcela de área variável.
-	Considerando que apenas metade da sexta árvore está dentro da parcela, pois é a distância entre o ponto central P e o centro da sexta árvore que determinam o raio da parcela R, cada parcela possuirá 5,5 árvores e não seis. Desta forma, a estimativa do número de árvores por hectare (N) se dá pela relação abaixo:
 
  
+<h2>Vantagens e desvantagens do método de Prodan</h2>
+<p>As principais vantagens do método de Prodan, indicadas por Péllico Netto e Brena (1997) são:</p> 
+	<ul><li>É um método prático e de fácil operacionalidade no campo;</li>
+		<li>Dado o tamanho da unidade, é possível levantar várias unidades amostrais no tempo equivalente à medição de uma única unidade de área fixa;</li>
+		<li>Com uma rede de pontos distribuídos dentro do povoamento pode-se conseguir uma visão mais abrangente do mesmo;</li>
+		<li>Não ocorrem erros de demarcação de unidades de amostra;</li>
+		<li>Diminui o efeito de borda.</li></ul>
 
-Onde πR2 é a área da unidade amostral.
-Estimativa da área basal por hectare
- 
-Estimativa do volume por hectare 
-A estimativa do volume por hectare, a partir da volumetria de cada uma das seis árvores amostradas é dada por: 
- 
-Vantagens e desvantagens do método de Prodan
-As principais vantagens do método de Prodan, indicadas por Péllico Netto e Brena (1997) são: 
-•	É um método prático e de fácil operacionalidade no campo;
-•	Dado o tamanho da unidade, é possível levantar várias unidades amostrais no tempo equivalente à medição de uma única unidade de área fixa;
-•	Com uma rede de pontos distribuídos dentro do povoamento pode-se conseguir uma visão mais abrangente do mesmo;
-•	Não ocorrem erros de demarcação de unidades de amostra;
-•	Diminui o efeito de borda.
-
-As principais desvantagens deste método, segundo os mesmos autores: Péllico Netto e Brena são:
-•	Os estimadores podem gerar tendências quando as árvores estão muito agrupadas ou muito espalhadas no povoamento;
-Devido ao pequeno tamanho da unidade amostral, não há como obter bons estimadores para variáveis de manejo florestal, como altura dominante e mortalidade.
+<p>As principais desvantagens deste método, segundo os mesmos autores: Péllico Netto e Brena são:</p>
+<ul><li>Os estimadores podem gerar tendências quando as árvores estão muito agrupadas ou muito espalhadas no povoamento;</li></ul>
+<p>Devido ao pequeno tamanho da unidade amostral, não há como obter bons estimadores para variáveis de manejo florestal, como altura dominante e mortalidade.</p>
 
 
 
