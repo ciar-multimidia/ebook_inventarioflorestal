@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,oBAAqB;EACnB,UAAU,EAAE,UAAU;;AAiBxB,sBAAiB;EAChB,WAAW,EAAE,MAAM;EACnB,WAAW,EAhBG,uBAAuB;;AAmBtC,IAAI;EACH,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAa;EACpB,WAAW,EAAE,KAAK;EAClB,WAAW,EAtBE,oBAAoB",
-"sources": ["_padroes.scss"],
-"names": [],
-"file": "_padroes.css"
-}

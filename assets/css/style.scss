@@ -83,10 +83,24 @@ main{
 	article{
 		margin: 0 auto;
 		width: $largura-container;
-
-		p,blockquote,ol,ul,h2,h3,h4,h5,h6,table{
-			width: 60%;
+		&.duascolunas{
+			@include display(flex);
+			@include justify-content(space-between);
+			@include flex-wrap(wrap);
+			& > div.coluna{
+				width: 48%;
+				& > *{
+					width: 100%;
+				}
+			}
 		}
+
+		& >{
+			*{
+				width: 60%;
+			}	
+		}
+		
 
 		a{
 			&, &:visited{
@@ -96,7 +110,7 @@ main{
 
 		h2{
 			font-size: 2.5em;
-			line-height: 1.3;
+			line-height: 1.2;
 			margin-top: 1em;
 			margin-bottom: 0;
 			@extend %texto-gradiente;
@@ -105,13 +119,30 @@ main{
 			}
 		}
 
+		h3{
+			font-size: 1.4em;
+			line-height: 1.3;
+			margin-top: 1em;
+			margin-bottom: 0;
+			color: $verde-claro-fundo;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+
+		p{
+			margin: 1.5em 0;
+		}
+
 		table{
+			margin: 3em 0;
 			font-size: 0.9em;
+			line-height: 1.2;
 			&, *{
 				border-collapse: collapse;
 			}
 			th{
-				padding: 0 0 0.3em;
+				padding: 0.3em 0.6em;
 				text-align: left;
 			}
 
@@ -123,10 +154,34 @@ main{
 				tr{
 					border-bottom: 1px solid grey;
 					th,td{
-						padding: 0.2em 0;
+						padding: 0.3em 0.6em;
 					}
 				}
 			}
+		}
+
+		figure{
+			margin: 2em 0;
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+				display: block;
+				box-shadow: 0 0 6px rgba(0,0,0,0.2)
+			}
+			figcaption{
+				margin-top: 0.5em;
+				font-size: 0.9em;
+				color: hsl(0,0%,40%);
+			}
+		}
+
+		.box{
+			border: 1px dotted grey;
+			border-left-width: 0;
+			border-right-width: 0;
+			padding: 2em 0 2em 2em;
+			margin: 2em 0;
 		}
 
 		.pergunta{
@@ -169,6 +224,8 @@ main{
 				line-height: 1;
 				font-size: 1.5em;
 			}
+
+
 
 			.alternativas{
 				margin-top: 2em;
