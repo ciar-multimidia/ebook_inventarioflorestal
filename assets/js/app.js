@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 		// console.log('Essa página não tem Mathjax');
 	}
 
-	var $btSumario = $('#btsumario');
+	var $btSumario = $('.btsumario');
 	var $sumario = $('#sumario');
 	var $btFechaSumario = $('#fecharSumario');
 	var animationEndEvents = 'animationend webkitAnimationEnd oanimationend MSAnimationEnd'

@@ -396,12 +396,43 @@ body {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center; }
+  #header .container {
+    width: 960px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
   #header h1 {
     color: white;
     margin: 0;
-    width: 960px;
-    text-align: center;
+    text-align: left;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+  #header .btsumario {
+    background-image: url(../media/btsumario2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 6px; }
   #header.abertura {
     padding: 0;
     height: calc(100vh - 100px); }
@@ -426,10 +457,10 @@ body {
         #header.abertura .logocurso.v {
           display: block; } }
 
-main article h2, main article .pergunta h3 {
+main article h2, main article .pergunta .enunciado > h3 {
   color: #8cc643; }
   @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
-    main article h2, main article .pergunta h3 {
+    main article h2, main article .pergunta .enunciado > h3 {
       background: linear-gradient(135deg, #3fa5a0 0%, #8cc643 70%, #0d330a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; } }
@@ -489,7 +520,14 @@ main {
         margin-top: 0; }
     main article p {
       margin: 1.5em 0; }
+    main article .pagina {
+      float: right;
+      width: auto;
+      display: block;
+      font-size: 2em;
+      color: grey; }
     main article table {
+      width: 60%;
       margin: 3em 0;
       font-size: 0.9em;
       line-height: 1.2; }
@@ -522,6 +560,14 @@ main {
       border-right-width: 0;
       padding: 2em 0 2em 2em;
       margin: 2em 0; }
+    main article dl {
+      margin: 0; }
+      main article dl dt {
+        font-weight: bold; }
+      main article dl dd {
+        margin: 0; }
+        main article dl dd + dt {
+          margin-top: 2em; }
     main article .pergunta {
       padding-bottom: 4em;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -536,14 +582,16 @@ main {
         border-bottom-style: dotted; }
         main article .pergunta.sub .alternativas {
           margin-top: 2em; }
-      main article .pergunta h2 {
+      main article .pergunta .enunciado > * {
+        width: 100%; }
+      main article .pergunta .enunciado > h2 {
         width: auto;
         margin: 0 0.5em 0em 0;
         font-weight: bold;
         float: left;
         vertical-align: middle;
         line-height: 1; }
-      main article .pergunta h3 {
+      main article .pergunta .enunciado > h3 {
         width: auto;
         margin: 0 0.5em 0em 0;
         font-weight: bold;
@@ -556,7 +604,6 @@ main {
         clear: both; }
         main article .pergunta .alternativas label {
           padding: 0.4em 0 0.4em 2em;
-          width: 60%;
           display: block;
           margin-bottom: 0.6em;
           background-color: rgba(222, 65, 0, 0);
@@ -845,53 +892,55 @@ main {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end; }
+  #container-bt-sumario .btsumario {
+    background: #299025;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #3fa5a0 0%, #8cc643 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #3fa5a0 0%, #8cc643 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #3fa5a0 0%, #8cc643 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); }
+    #container-bt-sumario .btsumario:hover {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+      #container-bt-sumario .btsumario:hover:before {
+        opacity: 1; }
+    #container-bt-sumario .btsumario:before, #container-bt-sumario .btsumario:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%; }
+    #container-bt-sumario .btsumario:before {
+      background-color: #d26200;
+      z-index: 1;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s linear;
+      -moz-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear; }
+    #container-bt-sumario .btsumario:after {
+      background-image: url(../media/btsumario.svg);
+      background-size: cover;
+      z-index: 2; }
 
-#btsumario {
+.btsumario {
   width: 50px;
   height: 50px;
-  background: #299025;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #3fa5a0 0%, #8cc643 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #3fa5a0 0%, #8cc643 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #3fa5a0 0%, #8cc643 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   position: relative;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
   -webkit-transition-property: box-shadow, opacity;
   -moz-transition-property: box-shadow, opacity;
   transition-property: box-shadow, opacity; }
-  #btsumario.sumario-aberto {
+  .btsumario.sumario-aberto {
     pointer-events: none;
     opacity: 0.1; }
-  #btsumario:hover {
-    cursor: pointer;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
-    #btsumario:hover:before {
-      opacity: 1; }
-  #btsumario:before, #btsumario:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%; }
-  #btsumario:before {
-    background-color: #d26200;
-    z-index: 1;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s linear;
-    -moz-transition: opacity 0.2s linear;
-    transition: opacity 0.2s linear; }
-  #btsumario:after {
-    background-image: url(../media/btsumario.svg);
-    background-size: cover;
-    z-index: 2; }
+  .btsumario:hover {
+    cursor: pointer; }
 
 @-webkit-keyframes sumarioAparece {
   0% {
