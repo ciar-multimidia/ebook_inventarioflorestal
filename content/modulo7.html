@@ -3,17 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Inventário Florestal</title>
-	<link rel="apple-touch-icon" href="../icon.png">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <meta name="description" content="E-book do curso de capacitação em Inventário Florestal.">
+    <title>Inventário Florestal</title>
+
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Inventário Florestal">
+    <meta property="og:image" content="../assets/media/fb-image.jpg">
+    <meta property="og:image:width" content="200px">
+    <meta property="og:image:height" content="200px">
+    <meta property="og:description" content="E-book do curso de capacitação em Inventário Florestal.">
+    <meta property="og:locale" content="pt_BR">
+    
+    <link rel="apple-touch-icon" href="../assets/media/fb-image.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+
+
 	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 	<header id="header">
 		<div class="container">
-			<h1>Avaliação</h1>
+			<h1>Atividade</h1>
 			<button class="btsumario"></button>
 		</div>
 	</header>
@@ -29,97 +44,99 @@
 				<div class="enunciado">
 					<h2>1</h2>
 					<p>Em um conjunto de árvores de Eucalipto com sete anos de idade no Cerrado brasileiro, foram mensuradas as alturas de 10 dessas árvores, mas os diâmetros (DAP) de todas elas. Com os dados da tabela abaixo, ajuste uma equação hipsométrica e marque a opção que representa a altura total estimada de uma árvore que apresenta um DAP igual a 45,3cm.</p>
-					<table>
-						<thead>
-							<tr>
-							  <th>Árvore</th>
-							  <th>DAP (cm)</th>
-							  <th>Altura total (m)</th>
-							</tr>
-						</thead>
+					<div class="table-container">
+						<table>
+							<thead>
+								<tr>
+								  <th>Árvore</th>
+								  <th>DAP (cm)</th>
+								  <th>Altura total (m)</th>
+								</tr>
+							</thead>
 
-						<tbody>
-							<tr>
-							  <td>1</td>
-							  <td>31,1</td>
-							  <td>15,3</td>
-							</tr>
-							<tr>
-							  <td>2</td>
-							  <td>30</td>
-							  <td>15</td>
-							</tr>
-							<tr>
-							  <td>3</td>
-							  <td>32</td>
-							  <td>16</td>
-							</tr>
-							<tr>
-							  <td>4</td>
-							  <td>33</td>
-							  <td>17</td>
-							</tr>
-							<tr>
-							  <td>5</td>
-							  <td>32</td>
-							  <td>15,7</td>
-							</tr>
-							<tr>
-							  <td>6</td>
-							  <td>40</td>
-							  <td>20</td>
-							</tr>
-							<tr>
-							  <td>7</td>
-							  <td>42</td>
-							  <td>21</td>
-							</tr>
-							<tr>
-							  <td>8</td>
-							  <td>45</td>
-							  <td>23</td>
-							</tr>
-							<tr>
-							  <td>9</td>
-							  <td>49</td>
-							  <td>25</td>
-							</tr>
-							<tr>
-							  <td>10</td>
-							  <td>49,5</td>
-							  <td>25</td>
-							</tr>
-						</tbody>
-					</table>
+							<tbody>
+								<tr>
+								  <td>1</td>
+								  <td>31,1</td>
+								  <td>15,3</td>
+								</tr>
+								<tr>
+								  <td>2</td>
+								  <td>30</td>
+								  <td>15</td>
+								</tr>
+								<tr>
+								  <td>3</td>
+								  <td>32</td>
+								  <td>16</td>
+								</tr>
+								<tr>
+								  <td>4</td>
+								  <td>33</td>
+								  <td>17</td>
+								</tr>
+								<tr>
+								  <td>5</td>
+								  <td>32</td>
+								  <td>15,7</td>
+								</tr>
+								<tr>
+								  <td>6</td>
+								  <td>40</td>
+								  <td>20</td>
+								</tr>
+								<tr>
+								  <td>7</td>
+								  <td>42</td>
+								  <td>21</td>
+								</tr>
+								<tr>
+								  <td>8</td>
+								  <td>45</td>
+								  <td>23</td>
+								</tr>
+								<tr>
+								  <td>9</td>
+								  <td>49</td>
+								  <td>25</td>
+								</tr>
+								<tr>
+								  <td>10</td>
+								  <td>49,5</td>
+								  <td>25</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
 				</div>
 				<div class="alternativas">
 					<label>
-						<input type="radio" name="pergunta1">
+						<input type="checkbox" name="pergunta1">
 						<span class="custominput"></span>
 						<span class='txt-alt'>200m</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta1">
+						<input type="checkbox" name="pergunta1">
 						<span class="custominput"></span>
 						<span class='txt-alt'>12,4m</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta1">
+						<input type="checkbox" name="pergunta1">
 						<span class="custominput"></span>
 						<span class='txt-alt'>50cm</span>
 					</label>
 
 					<label data-correta>
-						<input type="radio" name="pergunta1">
+						<input type="checkbox" name="pergunta1">
 						<span class="custominput"></span>
 						<span class='txt-alt'>22,9m</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta1">
+						<input type="checkbox" name="pergunta1">
 						<span class="custominput"></span>
 						<span class='txt-alt'>24m</span>
 					</label>
@@ -139,31 +156,31 @@
 
 				<div class="alternativas">
 					<label data-correta>
-						<input type="radio" name="pergunta2">
+						<input type="checkbox" name="pergunta2">
 						<span class="custominput"></span>
 						<span class='txt-alt'>1,7715m³</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta2">
+						<input type="checkbox" name="pergunta2">
 						<span class="custominput"></span>
 						<span class='txt-alt'>1,9911cm³</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta2">
+						<input type="checkbox" name="pergunta2">
 						<span class="custominput"></span>
 						<span class='txt-alt'>2,0000m³</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta2">
+						<input type="checkbox" name="pergunta2">
 						<span class="custominput"></span>
 						<span class='txt-alt'>10,1211m³</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta2">
+						<input type="checkbox" name="pergunta2">
 						<span class="custominput"></span>
 						<span class='txt-alt'>0,1111st</span>
 					</label>
@@ -183,31 +200,31 @@
 
 				<div class="alternativas">
 					<label>
-						<input type="radio" name="pergunta3">
+						<input type="checkbox" name="pergunta3">
 						<span class="custominput"></span>
 						<span class='txt-alt'>30cm</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta3">
+						<input type="checkbox" name="pergunta3">
 						<span class="custominput"></span>
 						<span class='txt-alt'>30m</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta3">
+						<input type="checkbox" name="pergunta3">
 						<span class="custominput"></span>
 						<span class='txt-alt'>2,69m</span>
 					</label>
 
 					<label data-correta>
-						<input type="radio" name="pergunta3">
+						<input type="checkbox" name="pergunta3">
 						<span class="custominput"></span>
 						<span class='txt-alt'>26,9cm</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta3">
+						<input type="checkbox" name="pergunta3">
 						<span class="custominput"></span>
 						<span class='txt-alt'>20m</span>
 					</label>
@@ -223,6 +240,7 @@
 				<div class="enunciado">
 					<h2>4</h2>
 					<p>Qual é o DAP médio de uma floresta de Mogno Africano onde foram mensurados os seguintes DAPs?</p>
+					<div class="table-container">
 					<table>
 					  <thead>
 					  	<tr>
@@ -274,35 +292,36 @@
 					  	</tr>
 					  </tbody>
 					</table>
+					</div>
 				</div>
 
 				<div class="alternativas">
 					<label data-correta>
-						<input type="radio" name="pergunta4">
+						<input type="checkbox" name="pergunta4">
 						<span class="custominput"></span>
 						<span class='txt-alt'>38cm</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta4">
+						<input type="checkbox" name="pergunta4">
 						<span class="custominput"></span>
 						<span class='txt-alt'>38m</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta4">
+						<input type="checkbox" name="pergunta4">
 						<span class="custominput"></span>
 						<span class='txt-alt'>20m</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta4">
+						<input type="checkbox" name="pergunta4">
 						<span class="custominput"></span>
 						<span class='txt-alt'>41cm</span>
 					</label>
 
 					<label>
-						<input type="radio" name="pergunta4">
+						<input type="checkbox" name="pergunta4">
 						<span class="custominput"></span>
 						<span class='txt-alt'>100m</span>
 					</label>
@@ -407,6 +426,7 @@
 				<div class="enunciado">
 					<h2>7</h2>
 					<p>Considerando o inventário florestal abaixo, que representa o número de indivíduos de cada espécie em três parcelas amostrais, responda as próximas quatro questões. </p>
+					<div class="table-container">
 					<table>
 					  <thead>
 					  	<tr>
@@ -457,8 +477,9 @@
 					  </tbody>
 					</table>
 				</div>
+				</div>
 
-				<div class="pergunta sub">
+				<div class="pergunta sub" data-tipo="uma-correta">
 					<div class="enunciado">
 						<h3>7.1</h3>
 						<p>Qual parcela apresenta a maior riqueza florística?</p>
@@ -466,31 +487,31 @@
 
 					<div class="alternativas">
 						<label>
-							<input type="radio" name="pergunta7-1">
+							<input type="checkbox" name="pergunta7-1">
 							<span class="custominput"></span>
 							<span class='txt-alt'>parcela 2</span>
 						</label>
 
 						<label data-correta>
-							<input type="radio" name="pergunta7-1">
+							<input type="checkbox" name="pergunta7-1">
 							<span class="custominput"></span>
 							<span class='txt-alt'>parcela 1</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-1">
+							<input type="checkbox" name="pergunta7-1">
 							<span class="custominput"></span>
 							<span class='txt-alt'>parcela 3</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-1">
+							<input type="checkbox" name="pergunta7-1">
 							<span class="custominput"></span>
 							<span class='txt-alt'>as parcelas 2 e 3</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-1">
+							<input type="checkbox" name="pergunta7-1">
 							<span class="custominput"></span>
 							<span class='txt-alt'>todas as parcelas apresentam a mesma riqueza florística</span>
 						</label>
@@ -499,7 +520,7 @@
 				</div>
 
 
-				<div class="pergunta sub">
+				<div class="pergunta sub" data-tipo="uma-correta">
 					<div class="enunciado">
 						<h3>7.2</h3>
 						<p>Qual a similaridade florística, pelo índice de Sorensen, entre as parcelas 2 e 3?</p>
@@ -508,31 +529,31 @@
 
 					<div class="alternativas">
 						<label data-correta>
-							<input type="radio" name="pergunta7-2">
+							<input type="checkbox" name="pergunta7-2">
 							<span class="custominput"></span>
 							<span class='txt-alt'>0,8</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-2">
+							<input type="checkbox" name="pergunta7-2">
 							<span class="custominput"></span>
 							<span class='txt-alt'>0,9</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-2">
+							<input type="checkbox" name="pergunta7-2">
 							<span class="custominput"></span>
 							<span class='txt-alt'>1,0</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-2">
+							<input type="checkbox" name="pergunta7-2">
 							<span class="custominput"></span>
 							<span class='txt-alt'>0,1</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-2">
+							<input type="checkbox" name="pergunta7-2">
 							<span class="custominput"></span>
 							<span class='txt-alt'>100</span>
 						</label>
@@ -541,7 +562,7 @@
 				</div>
 
 
-				<div class="pergunta sub">
+				<div class="pergunta sub" data-tipo="uma-correta">
 					<div class="enunciado">
 						<h3>7.3</h3>
 						<p>Qual parcela apresenta a maior diversidade florística?</p>
@@ -549,31 +570,31 @@
 
 					<div class="alternativas">
 						<label data-correta>
-							<input type="radio" name="pergunta7-3">
+							<input type="checkbox" name="pergunta7-3">
 							<span class="custominput"></span>
 							<span class='txt-alt'>Parcela 3</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-3">
+							<input type="checkbox" name="pergunta7-3">
 							<span class="custominput"></span>
 							<span class='txt-alt'>Parcela 1</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-3">
+							<input type="checkbox" name="pergunta7-3">
 							<span class="custominput"></span>
 							<span class='txt-alt'>As parcelas 1, 2 e 3 apresentam a mesma diversidade</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-3">
+							<input type="checkbox" name="pergunta7-3">
 							<span class="custominput"></span>
 							<span class='txt-alt'>As parcelas 1 e 2 apresentam a mesma diversidade</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-3">
+							<input type="checkbox" name="pergunta7-3">
 							<span class="custominput"></span>
 							<span class='txt-alt'>Nenhuma das alternativas anteriores está correta</span>
 						</label>
@@ -581,7 +602,7 @@
 					</div>
 				</div>
 
-				<div class="pergunta sub">
+				<div class="pergunta sub" data-tipo="uma-correta">
 					<div class="enunciado">
 						<h3>7.4</h3>
 						<p>É possível que a parcela que apresenta a maior diversidade não possua a maior riqueza florística?</p>
@@ -589,13 +610,13 @@
 
 					<div class="alternativas">
 						<label data-correta>
-							<input type="radio" name="pergunta7-4">
+							<input type="checkbox" name="pergunta7-4">
 							<span class="custominput"></span>
 							<span class='txt-alt'>Sim</span>
 						</label>
 
 						<label>
-							<input type="radio" name="pergunta7-4">
+							<input type="checkbox" name="pergunta7-4">
 							<span class="custominput"></span>
 							<span class='txt-alt'>Não</span>
 						</label>
@@ -603,6 +624,15 @@
 					</div>
 				</div>
 
+			</div>
+
+			<div class="pontuacao-final">
+				<h2>Você acertou</h2>
+				<p>
+					<span class="n-acertos">0</span>
+					<span>de</span>
+					<span class="n-total">10</span>
+				</p>
 			</div>
 
 
@@ -613,12 +643,16 @@
 
 		<nav id="proxeant">
 			<a href="modulo6.html">
-				<span>&#9664;</span>
+				<svg viewBox="0 0 50 50">
+					<polygon points="50,0 0,25 50,50"/>
+				</svg>
 				<span>Referências</span>
 			</a>
 			<a href="ficha-tecnica.html">
 				<span>Ficha Técnica</span>
-				<span>&#9654;</span>
+				<svg viewBox="0 0 50 50">
+					<polygon points="0,50 50,25 0,0"/>
+				</svg>
 			</a>
 		</nav>
 	</main>
@@ -640,7 +674,7 @@
 		    <li><a href="modulo4.html">Métodos de Amostragem</a></li>
 		    <li><a href="modulo5.html">Fitossociologia e Diversidade</a></li>
 		    <li><a href="modulo6.html">Referências</a></li>
-		    <li class="atual"><a href="modulo7.html">Avaliação</a></li>
+		    <li class="atual"><a href="modulo7.html">Atividade</a></li>
 		    <li><a href="ficha-tecnica.html">Ficha Técnica</a></li>
 		</ol>
 
@@ -649,7 +683,7 @@
 
 	<script src="../assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../assets/js/mathjax-config.js"></script>
-	<script src="../assets/js/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
+	<script src="https://producao.ciar.ufg.br/cdn/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
 	<script src="../assets/js/app.js"></script>
 </body>
 </html>

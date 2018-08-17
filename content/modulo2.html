@@ -3,11 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Inventário Florestal</title>
-	<link rel="apple-touch-icon" href="../icon.png">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <meta name="description" content="E-book do curso de capacitação em Inventário Florestal.">
+    <title>Inventário Florestal</title>
+
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Inventário Florestal">
+    <meta property="og:image" content="../assets/media/fb-image.jpg">
+    <meta property="og:image:width" content="200px">
+    <meta property="og:image:height" content="200px">
+    <meta property="og:description" content="E-book do curso de capacitação em Inventário Florestal.">
+    <meta property="og:locale" content="pt_BR">
+    
+    <link rel="apple-touch-icon" href="../assets/media/fb-image.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+
+
 	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -21,6 +36,10 @@
 	<main>
 		<article>
 
+			<section id="opening-video">
+			    <video src="media/video/3_volumetria.mp4" autobuffer controls poster="media/video/thumbnails/3.png"></video>
+			</section>
+
 <span class="pagina">9</span>			
 			
 <p>A volumetria representa a maneira de se calcular o volume de árvores na floresta, individualmente e em conjunto. O volume florestal é expresso em metros cúbicos e/ou em metros estéreos, e são nessas unidades de medida que ocorre a maioria das transações financeiras florestais.</p>
@@ -28,11 +47,11 @@
 <p>A cubagem rigorosa é a forma mais apropriada para quantificar o volume do fuste de uma árvore. Por esta técnica, secciona-se o fuste em várias partes menores, mensurando-as individualmente.</p>
 <p>Após calcular o volume dessas partes individualmente, somam-se estes volumes para obter o volume total do fuste. A maneira mais comum para realizar uma cubagem rigorosa é pelo uso da expressão matemática de Smalian, conhecida como método de Smalian (SOARES et al., 2006):</p>
 
-<p><math><mi>V</mi><mo>=</mo><mfrac><mrow><msub><mrow><mi>A</mi><mi>S</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mrow><mi>A</mi><mi>S</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>*</mi><mi>L</mi></math></p>
+<p class="formula"><math><mi>V</mi><mo>=</mo><mfrac><mrow><msub><mrow><mi>A</mi><mi>S</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mrow><mi>A</mi><mi>S</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mi>*</mi><mi>L</mi></math></p>
  
 <p>AS<sub>1</sub> e AS<sub>2</sub> são as áreas seccionais obtidas nas extremidades de cada seção, em m², e L é o comprimento da seção. A área seccional (AS) é obtida pela expressão:</p>
 
-<p><math><mi>A</mi><mi>S</mi><mo>=</mo><mfrac><mrow><mi>π</mi><msup><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>4</mn></mrow></mfrac></math></p>
+<p class="formula"><math><mi>A</mi><mi>S</mi><mo>=</mo><mfrac><mrow><mi>π</mi><msup><mrow><mi>d</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>4</mn></mrow></mfrac></math></p>
  
 <p>sendo <i>d</i> o diâmetro da seção.</p>
 <p>Normalmente, o comprimento da seção (L) fica entre 1 e 2 metros, mas pode-se usar valores proporcionais ao comprimento do fuste, como proposto por Hohenadl (SANQUETTA et al., 2014).</p>
@@ -47,12 +66,12 @@
 
 <p>O fator de forma é uma relação matemática entre o volume de um cilindro que apresenta diâmetro igual ao DAP da árvore objeto de mensuração (pode-se usar o diâmetro da base da árvore também) e o volume real da árvore, mensurado por cubagem rigorosa:</p>
 
-<p><math><mi>f</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi></mrow><mrow><mi>V</mi><mi>c</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>r</mi><mi>o</mi></mrow></mfrac></math></p>
+<p class="formula"><math><mi>f</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi></mrow><mrow><mi>V</mi><mi>c</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>r</mi><mi>o</mi></mrow></mfrac></math></p>
 
 <p>Note que, para a estimativa do volume da floresta, deve-se usar um fator de forma médio (<math><mover accent="true"><mrow><mi>f</mi></mrow><mo>-</mo></mover></math>), obtido pela cubagem rigorosa de várias árvores (amostra representativa) em todas as classes de DAP da floresta. Dessa forma, o volume do fuste de uma árvore será obtido por:</p>
 
 
-<p><math><mi>V</mi><mo>=</mo><mfrac><mrow><mi>π</mi><msup><mrow><mi>D</mi><mi>A</mi><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>4</mn></mrow></mfrac><mi>H</mi><mover accent="true"><mrow><mi>f</mi></mrow><mo>-</mo></mover></math></p>
+<p class="formula"><math><mi>V</mi><mo>=</mo><mfrac><mrow><mi>π</mi><msup><mrow><mi>D</mi><mi>A</mi><mi>P</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mn>4</mn></mrow></mfrac><mi>H</mi><mover accent="true"><mrow><mi>f</mi></mrow><mo>-</mo></mover></math></p>
  
 <p>Neste caso, deve-se observar as unidades de medida e tanto o DAP quanto a altura (H) devem ser expressos em metros (m), pois o volume será expresso em metros cúbicos (m³).</p>
 <h2>Modelos volumétricos</h2>
@@ -63,7 +82,7 @@
 
 <p>O uso do modelo de Schumacher e Hall é feito linearizando-o pela aplicação de logaritmo neperiano (ln). De acordo com as propriedades logarítmicas, o modelo linearizado fica assim, devendo ser empregado da mesma maneira que os modelos hipsométricos:</p>
 
-<p><math><mi>L</mi><mi>n</mi><mi>V</mi><mo>=</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>+</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>1</mn></mrow></msub><mi>L</mi><mi>n</mi><mi> </mi><mi>D</mi><mi>A</mi><mi>P</mi><mo>+</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>2</mn></mrow></msub><mi>L</mi><mi>n</mi><mi>H</mi><mo>+</mo><mi>ε</mi></math></p>
+<p class="formula"><math><mi>L</mi><mi>n</mi><mi>V</mi><mo>=</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>+</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>1</mn></mrow></msub><mi>L</mi><mi>n</mi><mi> </mi><mi>D</mi><mi>A</mi><mi>P</mi><mo>+</mo><msub><mrow><mi>β</mi></mrow><mrow><mn>2</mn></mrow></msub><mi>L</mi><mi>n</mi><mi>H</mi><mo>+</mo><mi>ε</mi></math></p>
  
 <h2>Volume de madeira empilhada</h2>
 
@@ -73,16 +92,16 @@
 
 <p>O volume total de uma pilha de madeira, considerando os espaços vazios, é denominado de volume estéreo (<i>st</i>) e, para saber sobre o volume real de madeira empilhada (<i>V</i>), deve-se desenvolver a seguinte expressão:</p>
 
-<p><math><mi>V</mi><mo>=</mo><mi>s</mi><mi>t</mi><mo>.</mo><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi></mrow></msub></math></p>
+<p class="formula"><math><mi>V</mi><mo>=</mo><mi>s</mi><mi>t</mi><mo>.</mo><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi></mrow></msub></math></p>
  
 <p>Para se calcular o fator de empilhamento (f<sub>e</sub>) deve-se proceder à derrubada e seccionamento de algumas árvores na floresta ou na unidade amostral, realizar a cubagem rigorosa desta(s) árvore(s), empilhá-la(s) e realizar a medição do sólido geométrico formado pela pilha de madeira. O volume do sólido geométrico é obtido mensurando-se as dimensões da pilha de madeira, conforme a seguinte expressão:</p>
  
-<p><math><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>v</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi> </mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi><mi> </mi><mfenced separators="|"><mrow><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced></mrow><mrow><mi>v</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi> </mi><mi>e</mi><mi>m</mi><mi>p</mi><mi>i</mi><mi>l</mi><mi>h</mi><mi>a</mi><mi>d</mi><mi>o</mi><mi> </mi><mfenced separators="|"><mrow><mi>s</mi><mi>t</mi></mrow></mfenced></mrow></mfrac></math></p>
+<p class="formula"><math><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>v</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi> </mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>l</mi><mi> </mi><mfenced separators="|"><mrow><msup><mrow><mi>m</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow></mfenced></mrow><mrow><mi>v</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi> </mi><mi>e</mi><mi>m</mi><mi>p</mi><mi>i</mi><mi>l</mi><mi>h</mi><mi>a</mi><mi>d</mi><mi>o</mi><mi> </mi><mfenced separators="|"><mrow><mi>s</mi><mi>t</mi></mrow></mfenced></mrow></mfrac></math></p>
 
 <h2>Espessura da casca</h2>
 <p>A espessura da casca pode ser mensurada de forma simples, devendo-se apenas conhecer a relação matemática entre esta e o diâmetro de uma árvore. O diâmetro sem casca é expresso pela seguinte relação matemática:</p>
 
-<p><math><msub><mrow><mi>d</mi></mrow><mrow><mi>s</mi><mo>/</mo><mi>c</mi></mrow></msub><mo>=</mo><msub><mrow><mi>d</mi></mrow><mrow><mi>c</mi><mo>/</mo><mi>c</mi></mrow></msub><mo>-</mo><mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mi>c</mi></mrow></msub></math></p>
+<p class="formula"><math><msub><mrow><mi>d</mi></mrow><mrow><mi>s</mi><mo>/</mo><mi>c</mi></mrow></msub><mo>=</mo><msub><mrow><mi>d</mi></mrow><mrow><mi>c</mi><mo>/</mo><mi>c</mi></mrow></msub><mo>-</mo><mn>2</mn><msub><mrow><mi>E</mi></mrow><mrow><mi>c</mi></mrow></msub></math></p>
  
 <p>Onde, d<sub>s/c</sub> é o diâmetro sem casca, d<sub>c/c</sub> é o diâmetro com casca e <i>E<sub>c</sub></i> refere-se à espessura da casca.</p>
 
@@ -99,12 +118,16 @@
 
 		<nav id="proxeant">
 			<a href="modulo1.html">
-				<span>&#9664;</span>
+				<svg viewBox="0 0 50 50">
+					<polygon points="50,0 0,25 50,50"/>
+				</svg>
 				<span>Técnicas e instrumentos de medição de árvores</span>
 			</a>
 			<a href="modulo3.html">
 				<span>Teoria de Amostragem</span>
-				<span>&#9654;</span>
+				<svg viewBox="0 0 50 50">
+					<polygon points="0,50 50,25 0,0"/>
+				</svg>
 			</a>
 		</nav>
 	</main>
@@ -126,7 +149,7 @@
 		    <li><a href="modulo4.html">Métodos de Amostragem</a></li>
 		    <li><a href="modulo5.html">Fitossociologia e Diversidade</a></li>
 		    <li><a href="modulo6.html">Referências</a></li>
-		    <li><a href="modulo7.html">Avaliação</a></li>
+		    <li><a href="modulo7.html">Atividade</a></li>
 		    <li><a href="ficha-tecnica.html">Ficha Técnica</a></li>
 		</ol>
 
@@ -135,7 +158,7 @@
 
 	<script src="../assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../assets/js/mathjax-config.js"></script>
-	<script src="../assets/js/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
+	<script src="https://producao.ciar.ufg.br/cdn/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
 	<script src="../assets/js/app.js"></script>
 </body>
 </html>

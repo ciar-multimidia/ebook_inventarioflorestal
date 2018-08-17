@@ -52,49 +52,88 @@ jQuery(document).ready(function($) {
 		event.stopPropagation();
 	});
 
+	var $perguntas = $('.pergunta[data-tipo]');
+	var $boxScore = $('.pontuacao-final');
+	var nAcertos = 0;
 
+	$boxScore.find('.n-total').text($perguntas.length);
 
-	var $alt_perguntas = $('.alternativas');
+	var tentarMostrarPontuacao = function(){
+		if ($perguntas.filter('[data-acertou]').length === $perguntas.length) {
+			$boxScore.find('.n-acertos').text(nAcertos);
+			setTimeout(function(){
+				$boxScore.addClass('db');
+				var scrollDestiny = 
+					$boxScore.offset().top > $('body').height()-$(window).height() ?
+					$('body').height()-$(window).height() :
+					$boxScore.offset().top;
+				$('html,body').animate({'scrollTop': scrollDestiny}, 1000, function() {
+					$boxScore.addClass('visivel');
+				});
+			},600);
+		}
+	}
 
-	if ($alt_perguntas) {
-		$alt_perguntas.each(function(index, el) {
-			var $alts = $(el).children('label');
-			var $alt_correta = $alts.filter('[data-correta]');
-			var $input_alts = $alts.children('input');
-			// $(el).data('alt_correta', $alts.index( $alts.filter('[data-correta]') ) );
-			$input_alts.on('change', function(event) {
-				if ($(this).is(':checked')) {
+	if ($perguntas.length > 0) {
+		$perguntas.each(function(index, el) {
+			var $thisPergunta = $(el);
+			var tipoPergunta = $(el).attr('data-tipo');
+			if (tipoPergunta === 'uma-correta') {
+				var $alts = $thisPergunta.find('.alternativas > label');
+				var $alt_correta = $alts.filter('[data-correta]');
+				var $input_alts = $alts.children('input');
+				// $thisPergunta.data('alt_correta', $alts.index( $alts.filter('[data-correta]') ) );
+				$input_alts.on('change', function(event) {
 					$input_alts.attr('disabled', 'disabled');
 					var $label_desse_input = $(this).closest('label');
 					$label_desse_input.addClass('marcada revelada');
 					$alt_correta.addClass('revelada');
-				}
-			});
-
-		});
-	}
-
-	var $prepo_perguntas = $('.preposicoes');
-
-	if ($prepo_perguntas) {
-		$prepo_perguntas.each(function(index, el) {
-			var $itens_prepo = $(el).children('li');
-			$itens_prepo.each(function(index2, el2) {
-				var vouf = $(el2).attr('data-resposta');
-				var $bt_vouf = $(el2).children('button');
-				$bt_vouf.on('click', function(event) {
-					$(el2).addClass('respondida');
-					$bt_vouf.attr('disabled', 'disabled').off('click');
-					if ($(this).is('.bt-'+vouf)) {
-						$(el2).addClass('acertou');
+					if ($label_desse_input.is($alt_correta)) {
+						$thisPergunta.attr('data-acertou', 'true');
+						nAcertos++;
 					} else{
-						$(el2).addClass('errou');
+						$thisPergunta.attr('data-acertou', 'false');
 					}
+					tentarMostrarPontuacao();
 				});
-			});
+			} 
+
+			else if (tipoPergunta === 'v-ou-f') {
+				var $itens_prepo = $thisPergunta.find('.preposicoes > li');
+				var prepos_clicados = 0;
+				var prepos_acertados = 0;
+				$itens_prepo.each(function(index2, el2) {
+					var vouf = $(el2).attr('data-resposta');
+					var $bt_vouf = $(el2).children('button');
+					$bt_vouf.on('click', function(event) {
+						$(el2).addClass('respondida');
+						$bt_vouf.attr('disabled', 'disabled').off('click');
+						prepos_clicados++;
+						if ($(this).is('.bt-'+vouf)) {
+							$(el2).addClass('acertou');
+							prepos_acertados++;
+						} else{
+							$(el2).addClass('errou');
+						}
+						if (prepos_clicados === $itens_prepo.length) {
+
+							if (prepos_acertados === $itens_prepo.length) {
+								$thisPergunta.attr('data-acertou', 'true');
+								nAcertos++;
+							}
+							else{
+								$thisPergunta.attr('data-acertou', 'false');
+							}
+
+							tentarMostrarPontuacao();
+							
+						}
+
+					});
+				});
+			}
 		});
 	}
-
 });
 
 

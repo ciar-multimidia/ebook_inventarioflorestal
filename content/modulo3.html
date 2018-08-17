@@ -3,11 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Inventário Florestal</title>
-	<link rel="apple-touch-icon" href="../icon.png">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <meta name="description" content="E-book do curso de capacitação em Inventário Florestal.">
+    <title>Inventário Florestal</title>
+
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Inventário Florestal">
+    <meta property="og:image" content="../assets/media/fb-image.jpg">
+    <meta property="og:image:width" content="200px">
+    <meta property="og:image:height" content="200px">
+    <meta property="og:description" content="E-book do curso de capacitação em Inventário Florestal.">
+    <meta property="og:locale" content="pt_BR">
+    
+    <link rel="apple-touch-icon" href="../assets/media/fb-image.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+
+
 	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -20,6 +35,10 @@
 
 	<main>
 		<article>
+
+			<section id="opening-video">
+			    <video src="media/video/4_teoria_de_amostragem.mp4" autobuffer controls poster="media/video/thumbnails/4.png"></video>
+			</section>
 
 <span class="pagina">11</span>
 			
@@ -50,25 +69,25 @@
 <p>É uma medida de posição e, portanto, indica o valor médio da população.</p>
 
 
-<p><math><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>=</mo><mfrac><mrow><mrow><msubsup><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><mrow><msub><mrow><mi>X</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></mrow></mrow><mrow><mi>n</mi></mrow></mfrac></math></p>
+<p class="formula"><math><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>=</mo><mfrac><mrow><mrow><msubsup><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><mrow><msub><mrow><mi>X</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow></mrow></mrow><mrow><mi>n</mi></mrow></mfrac></math></p>
 
 
 <h3>Variância - <math><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></math></h3> 
 <p>Determina o grau de dispersão da variável de interesse em relação à sua média.</p>
 
-<p><math><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup><mo>=</mo><mfrac><mrow><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><mrow><msup><mrow><mo>(</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac></math></p>
+<p class="formula"><math><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup><mo>=</mo><mfrac><mrow><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><mrow><msup><mrow><mo>(</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac></math></p>
  
 <h3>Erro Padrão - <math><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></math></h3> 
 <p>Indica a precisão da média amostral em relação a todos os possíveis desvios-padrão (variância) na população de tamanho <i>n</i>.</p>
 
-<p><math><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mo>=</mo><msqrt><mfrac><mrow><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><mi>n</mi></mrow></mfrac></msqrt></math></p>
+<p class="formula"><math><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mo>=</mo><msqrt><mfrac><mrow><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><mi>n</mi></mrow></mfrac></msqrt></math></p>
  
 <h3>Erro de amostragem - Ea</h3>
 <p>Erro devido ao processo de amostragem. É estimado para um nível de probabilidade (1-α).</p>
  
-<p><math><msub><mrow><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi> </mi><mi>a</mi><mi>b</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>t</mi><mi>o</mi><mo>-</mo><mi> </mi><mi>E</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>=</mo><mo>±</mo><mi>t</mi><mo>.</mo><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></math></p>
+<p class="formula"><math><msub><mrow><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi> </mi><mi>a</mi><mi>b</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>u</mi><mi>t</mi><mi>o</mi><mo>-</mo><mi> </mi><mi>E</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>=</mo><mo>±</mo><mi>t</mi><mo>.</mo><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></math></p>
 
-<p><math><msub><mrow><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi> </mi><mi>r</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>v</mi><mi>o</mi><mi> </mi><mfenced separators="|"><mrow><mi>%</mi></mrow></mfenced><mo>-</mo><mi> </mi><mi>E</mi></mrow><mrow><mi>r</mi></mrow></msub><mo>=</mo><mo>±</mo><mfrac><mrow><mi>t</mi><mo>.</mo><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></mfrac><mi>*</mi><mn>100</mn></math></p>
+<p class="formula"><math><msub><mrow><mi>E</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi> </mi><mi>r</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>v</mi><mi>o</mi><mi> </mi><mfenced separators="|"><mrow><mi>%</mi></mrow></mfenced><mo>-</mo><mi> </mi><mi>E</mi></mrow><mrow><mi>r</mi></mrow></msub><mo>=</mo><mo>±</mo><mfrac><mrow><mi>t</mi><mo>.</mo><msub><mrow><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></mfrac><mi>*</mi><mn>100</mn></math></p>
 
 <p>O valor de <i>t</i> é obtido na tabela de distribuição de <i>t-Student</i> para a probabilidade fixada e para os graus de liberdade da amostragem [número de unidades amostrais menos uma (n – 1)].</p>
 
@@ -77,33 +96,33 @@
 <p>Embora a média amostral seja a melhor estimativa da média paramétrica da população, ela é apenas uma estimativa e, portanto, para inferir sobre a confiabilidade dessa estimativa é preciso calcular o Intervalo de Confiança – IC, que indica o seguinte: se todas as possíveis médias de tamanho n forem tomadas da população e se fosse calculado o Intervalo de Confiança para cada uma dessas amostras, X% desses intervalos de confiança conteriam a verdadeira média da população. Ou seja, para X% das amostras, o intervalo entre o limite <p>inferior e o limite superior do IC incluirá a verdadeira média da população.</p>
 <p>O IC só garante que X% das médias amostrais estarão dentro do intervalo (IC), sendo X a probabilidade de confiança estabelecida. Geralmente, X é estabelecido em Termos de Referência de Órgãos Ambientais ou pelo pesquisador, e fica entre 90%, 95% e 99% de confiança (P).</p>
 
-<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>-</mo><msub><mrow><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mi> </mi><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>-</mo></mover><mo>≤</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>+</mo><msub><mrow><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow></mfenced><mo>=</mo><mi>P</mi></math></p>
+<p class="formula"><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>-</mo><msub><mrow><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mi> </mi><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>-</mo></mover><mo>≤</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>+</mo><msub><mrow><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow></mfenced><mo>=</mo><mi>P</mi></math></p>
 
 
 
 <p>Estimativa para o total da população:</p>
 
-<p><math><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>=</mo><mi>N</mi><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></math></p>
+<p class="formula"><math><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>=</mo><mi>N</mi><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></math></p>
 
  
 <p>Intervalo de confiança para o total:</p>
 
-<p><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>-</mo><msub><mrow><mi>N</mi><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mi> </mi><mo>≤</mo><mi>X</mi><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>+</mo><msub><mrow><mi>N</mi><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow></mfenced><mo>=</mo><mi>P</mi></math></p>
+<p class="formula"><math><mi>I</mi><mi>C</mi><mfenced open="[" close="]" separators="|"><mrow><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>-</mo><msub><mrow><mi>N</mi><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub><mi> </mi><mo>≤</mo><mi>X</mi><mo>≤</mo><mover accent="true"><mrow><mi>X</mi></mrow><mo>^</mo></mover><mo>+</mo><msub><mrow><mi>N</mi><mi>t</mi><mi>s</mi></mrow><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover></mrow></msub></mrow></mfenced><mo>=</mo><mi>P</mi></math></p>
 
 <h2>Intensidade de amostragem</h2>
 <p>A intensidade amostral é a razão entre o tamanho da amostra (n) e o tamanho da população, isto é, a razão entre o número de unidades amostrais que compõem a amostra e o número total de unidades amostrais da população (N).</p>
 <p>A intensidade amostral pode ser expressa também pela razão entre a área amostrada (a) e a área total da população (A).</p>
 
-<p><math><mi>f</mi><mo>=</mo><mfrac><mrow><mi>n</mi></mrow><mrow><mi>N</mi></mrow></mfrac><mi> </mi><mi>o</mi><mi>u</mi><mi> </mi><mi>f</mi><mo>=</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>A</mi></mrow></mfrac></math></p>
+<p class="formula"><math><mi>f</mi><mo>=</mo><mfrac><mrow><mi>n</mi></mrow><mrow><mi>N</mi></mrow></mfrac><mi> </mi><mi>o</mi><mi>u</mi><mi> </mi><mi>f</mi><mo>=</mo><mfrac><mrow><mi>a</mi></mrow><mrow><mi>A</mi></mrow></mfrac></math></p>
 
 <span class="pagina">13</span>
  
 <h2>Número ideal de unidades amostrais que devem compor uma amostra</h2>
 <p>A expressão abaixo pode ser utilizada para quantificar o número mínimo de unidades amostrais que devem compor a amostra:</p>
 
-<p><math><mi>n</mi><mo>=</mo><mfrac><mrow><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac></math></p>
+<p class="formula"><math><mi>n</mi><mo>=</mo><mfrac><mrow><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><msubsup><mrow><mi>s</mi></mrow><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mrow><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac></math></p>
 
-<p><math><mi>E</mi><mo>=</mo><mo>(</mo><mi>L</mi><mi>E</mi><mo>.</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>)</mo></math> </p>
+<p class="formula"><math><mi>E</mi><mo>=</mo><mo>(</mo><mi>L</mi><mi>E</mi><mo>.</mo><mover accent="true"><mrow><mi>x</mi></mrow><mo>-</mo></mover><mo>)</mo></math> </p>
  
 <p>LE = Limite de erro de amostragem admitido, geralmente 10%.</p>
 
@@ -112,12 +131,16 @@
 
 		<nav id="proxeant">
 			<a href="modulo2.html">
-				<span>&#9664;</span>
+				<svg viewBox="0 0 50 50">
+					<polygon points="50,0 0,25 50,50"/>
+				</svg>
 				<span>Volumetria</span>
 			</a>
 			<a href="modulo4.html">
 				<span>Métodos de Amostragem</span>
-				<span>&#9654;</span>
+				<svg viewBox="0 0 50 50">
+					<polygon points="0,50 50,25 0,0"/>
+				</svg>
 			</a>
 		</nav>
 	</main>
@@ -139,7 +162,7 @@
 		    <li><a href="modulo4.html">Métodos de Amostragem</a></li>
 		    <li><a href="modulo5.html">Fitossociologia e Diversidade</a></li>
 		    <li><a href="modulo6.html">Referências</a></li>
-		    <li><a href="modulo7.html">Avaliação</a></li>
+		    <li><a href="modulo7.html">Atividade</a></li>
 		    <li><a href="ficha-tecnica.html">Ficha Técnica</a></li>
 		</ol>
 
@@ -148,7 +171,7 @@
 
 	<script src="../assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../assets/js/mathjax-config.js"></script>
-	<script src="../assets/js/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
+	<script src="https://producao.ciar.ufg.br/cdn/MathJax/MathJax.js?config=MML_HTMLorMML"></script>
 	<script src="../assets/js/app.js"></script>
 </body>
 </html>
