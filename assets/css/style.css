@@ -596,6 +596,42 @@ main {
       @media screen and (max-width: 1000px) {
         main article div.colunas-2 > div.coluna {
           width: 100%; } }
+    main article .ficha-catalografica {
+      margin-top: 2em;
+      font-size: 0.9em;
+      border: 1px solid; }
+      main article .ficha-catalografica:after {
+        content: '';
+        display: table;
+        clear: both; }
+      main article .ficha-catalografica > h2.titulo {
+        padding: 1em;
+        border-bottom: 1px solid;
+        text-align: center;
+        color: inherit;
+        background: transparent;
+        -webkit-background-clip: none;
+        -webkit-text-fill-color: inherit;
+        font-size: 1em;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold; }
+        main article .ficha-catalografica > h2.titulo span {
+          display: block; }
+      main article .ficha-catalografica > div.codigo-e-dados {
+        padding: 1em;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main article .ficha-catalografica > div.codigo-e-dados .dados {
+          margin-left: 2em; }
+      main article .ficha-catalografica p {
+        margin: 0 0 1em; }
+        main article .ficha-catalografica p.cdu {
+          text-align: right; }
     main article div.center {
       width: 100%; }
       main article div.center p {

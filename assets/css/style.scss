@@ -196,6 +196,49 @@ main{
 			}
 		}
 
+		.ficha-catalografica{
+			margin-top: 2em;
+			font-size: 0.9em;
+			border: 1px solid;
+			&:after{
+				content: '';
+				display: table;
+				clear: both;
+			}
+			& >{
+				h2.titulo{
+					padding: 1em;
+					border-bottom: 1px solid;
+					text-align: center;
+					color: inherit;
+					background: transparent;
+					-webkit-background-clip: none;
+					-webkit-text-fill-color: inherit;
+					font-size: 1em;
+					font-family: $fonte-corpo;
+					font-weight: bold;
+					span{
+						display: block;
+					}
+				}
+
+				div.codigo-e-dados{
+					padding: 1em;
+					@include display(flex);
+					.dados{
+						margin-left: 2em;
+					}
+				}
+			}
+
+			p{
+				margin: 0 0 1em;
+				&.cdu{
+					text-align: right;
+				}
+			}
+		}
+
 		div.center{
 			width: 100%;
 			p{
